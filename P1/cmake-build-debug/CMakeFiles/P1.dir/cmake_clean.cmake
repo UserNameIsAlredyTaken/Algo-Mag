@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/P1.dir/Source/main.cpp.obj"
-  "CMakeFiles/P1.dir/Source/qsort.cpp.obj"
+  "CMakeFiles/P1.dir/main.cpp.obj"
   "P1.exe"
   "P1.exe.manifest"
   "P1.lib"

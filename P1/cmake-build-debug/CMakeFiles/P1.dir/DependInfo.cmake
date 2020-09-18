@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Projects/Algo-Mag/P1/Source/main.cpp" "C:/Projects/Algo-Mag/P1/cmake-build-debug/CMakeFiles/P1.dir/Source/main.cpp.obj"
-  "C:/Projects/Algo-Mag/P1/Source/qsort.cpp" "C:/Projects/Algo-Mag/P1/cmake-build-debug/CMakeFiles/P1.dir/Source/qsort.cpp.obj"
+  "C:/Projects/Algo-Mag/P1/main.cpp" "C:/Projects/Algo-Mag/P1/cmake-build-debug/CMakeFiles/P1.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

@@ -3,6 +3,14 @@ project(P1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(P1 Source/main.cpp)
+set(HEADER_FILES
+        QuickSorter.h
+        )
 
-#add_subdirectory(Testing)
+set(SOURCE_FILES
+        QuickSorter.cpp
+        )
+
+add_executable(P1 main.cpp)
+
+add_subdirectory(Google_tests)
