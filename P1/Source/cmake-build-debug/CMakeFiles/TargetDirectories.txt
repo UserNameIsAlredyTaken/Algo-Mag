@@ -1,0 +1,3 @@
+C:/Projects/Algo-Mag/P1/Source/cmake-build-debug/CMakeFiles/P1.dir
+C:/Projects/Algo-Mag/P1/Source/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Projects/Algo-Mag/P1/Source/cmake-build-debug/CMakeFiles/rebuild_cache.dir
