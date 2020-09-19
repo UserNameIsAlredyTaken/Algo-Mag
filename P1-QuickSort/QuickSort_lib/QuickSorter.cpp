@@ -2,7 +2,7 @@
 #include "QuickSorter.h"
 
 template<typename T, typename Compare>
-void /*QuickSorter::*/sort(T *first, T *last, Compare comp)
+void sort(T *first, T *last, Compare comp)
 {
 //    while (first < last)
     while(last - first > INSERTION_SORT_THRESHOLD)
@@ -22,7 +22,7 @@ void /*QuickSorter::*/sort(T *first, T *last, Compare comp)
 }
 
 template<typename T, typename Compare>
-void /*QuickSorter::*/insertionSort(T arr[], int n, Compare comp)
+void insertionSort(T arr[], int n, Compare comp)
 {
     T key;
     int i, j;
@@ -31,9 +31,9 @@ void /*QuickSorter::*/insertionSort(T arr[], int n, Compare comp)
         key = arr[i];
         j = i - 1;
 
-        /* Move elements of arr[0..i-1], that are
-        greater than key, to one position ahead
-        of their current position */
+////    Move elements of arr[0..i-1], that are
+////    greater than key, to one position ahead
+////    of their current position
         while (j >= 0 && comp(key, arr[j]))
         {
             arr[j + 1] = arr[j];
@@ -45,7 +45,7 @@ void /*QuickSorter::*/insertionSort(T arr[], int n, Compare comp)
 
 
 template<typename T, typename Compare>
-T* /*QuickSorter::*/partition(T *first, T *last, Compare comp)
+T* partition(T *first, T *last, Compare comp)
 {
     T* middle = first + (last - first) / 2;
     T* med = median(first, middle, last, comp);
@@ -74,7 +74,7 @@ T* /*QuickSorter::*/partition(T *first, T *last, Compare comp)
 }
 
 template<typename T, typename Compare>
-T* /*QuickSorter::*/median(T* a, T* b, T* c, Compare comp)
+T* median(T* a, T* b, T* c, Compare comp)
 {
     if (comp(*a, *b))
     {
@@ -88,7 +88,7 @@ T* /*QuickSorter::*/median(T* a, T* b, T* c, Compare comp)
 }
 
 template<typename T>
-void /*QuickSorter::*/swap(T* a, T* b){
+void swap(T* a, T* b){
     T temp = *a;
     *a = *b;
     *b = temp;

@@ -421,6 +421,9 @@
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/QuickSorterTests.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock/src/gmock-all.cc">
 			<Option target="gmock_main"/>
 			<Option target="gmock"/>

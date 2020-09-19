@@ -86,21 +86,48 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\QuickSorterTests.cpp.s: cmake_force
 <<
 	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug
 
+Google_tests\CMakeFiles\Google_Tests_run.dir\TestUtils.cpp.obj: Google_tests\CMakeFiles\Google_Tests_run.dir\flags.make
+Google_tests\CMakeFiles\Google_Tests_run.dir\TestUtils.cpp.obj: ..\Google_tests\TestUtils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Google_tests/CMakeFiles/Google_Tests_run.dir/TestUtils.cpp.obj"
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Google_tests
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Google_Tests_run.dir\TestUtils.cpp.obj /FdCMakeFiles\Google_Tests_run.dir\ /FS -c C:\Projects\Algo-Mag\P1-QuickSort\Google_tests\TestUtils.cpp
+<<
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug
+
+Google_tests\CMakeFiles\Google_Tests_run.dir\TestUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/TestUtils.cpp.i"
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Google_tests
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\Google_Tests_run.dir\TestUtils.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\Algo-Mag\P1-QuickSort\Google_tests\TestUtils.cpp
+<<
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug
+
+Google_tests\CMakeFiles\Google_Tests_run.dir\TestUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/TestUtils.cpp.s"
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Google_tests
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Google_Tests_run.dir\TestUtils.cpp.s /c C:\Projects\Algo-Mag\P1-QuickSort\Google_tests\TestUtils.cpp
+<<
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug
+
 # Object files for target Google_Tests_run
 Google_Tests_run_OBJECTS = \
-"CMakeFiles\Google_Tests_run.dir\QuickSorterTests.cpp.obj"
+"CMakeFiles\Google_Tests_run.dir\QuickSorterTests.cpp.obj" \
+"CMakeFiles\Google_Tests_run.dir\TestUtils.cpp.obj"
 
 # External object files for target Google_Tests_run
 Google_Tests_run_EXTERNAL_OBJECTS =
 
 Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\QuickSorterTests.cpp.obj
+Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\TestUtils.cpp.obj
 Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\build.make
 Google_tests\Google_Tests_run.exe: QuickSort_lib\QuickSort_lib.lib
 Google_tests\Google_Tests_run.exe: lib\gtestd.lib
 Google_tests\Google_Tests_run.exe: lib\gtest_maind.lib
 Google_tests\Google_Tests_run.exe: lib\gtestd.lib
 Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Google_Tests_run.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Google_Tests_run.exe"
 	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Google_tests
 	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\Google_Tests_run.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\Google_Tests_run.dir\objects1.rsp @<<
  /out:Google_Tests_run.exe /implib:Google_Tests_run.lib /pdb:C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Google_tests\Google_Tests_run.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  ..\QuickSort_lib\QuickSort_lib.lib ..\lib\gtestd.lib ..\lib\gtest_maind.lib ..\lib\gtestd.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 

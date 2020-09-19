@@ -335,16 +335,14 @@ QuickSorter.h
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/QuickSorterTests.cpp
 gtest/gtest.h
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/gtest/gtest.h
+TestUtils.cpp
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp
 QuickSorter.cpp
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/QuickSorter.cpp
-random
--
-chrono
--
-iostream
--
-vector
--
 numeric
+-
+
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp
+map
 -
 

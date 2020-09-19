@@ -210,6 +210,39 @@ QuickSorterTests.cpp.s:
 	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Google_tests
 .PHONY : QuickSorterTests.cpp.s
 
+TestUtils.obj: TestUtils.cpp.obj
+
+.PHONY : TestUtils.obj
+
+# target to build an object file
+TestUtils.cpp.obj:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\TestUtils.cpp.obj
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Google_tests
+.PHONY : TestUtils.cpp.obj
+
+TestUtils.i: TestUtils.cpp.i
+
+.PHONY : TestUtils.i
+
+# target to preprocess a source file
+TestUtils.cpp.i:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\TestUtils.cpp.i
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Google_tests
+.PHONY : TestUtils.cpp.i
+
+TestUtils.s: TestUtils.cpp.s
+
+.PHONY : TestUtils.s
+
+# target to generate assembly for a file
+TestUtils.cpp.s:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\TestUtils.cpp.s
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Google_tests
+.PHONY : TestUtils.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -225,6 +258,9 @@ help:
 	@echo ... QuickSorterTests.obj
 	@echo ... QuickSorterTests.i
 	@echo ... QuickSorterTests.s
+	@echo ... TestUtils.obj
+	@echo ... TestUtils.i
+	@echo ... TestUtils.s
 .PHONY : help
 
 

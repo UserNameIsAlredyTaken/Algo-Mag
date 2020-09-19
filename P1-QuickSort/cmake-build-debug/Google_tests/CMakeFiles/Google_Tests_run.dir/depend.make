@@ -24,4 +24,7 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\QuickSorterTests.cpp.obj: ..\Google
 Google_tests\CMakeFiles\Google_Tests_run.dir\QuickSorterTests.cpp.obj: ..\QuickSort_lib\QuickSorter.cpp
 Google_tests\CMakeFiles\Google_Tests_run.dir\QuickSorterTests.cpp.obj: ..\QuickSort_lib\QuickSorter.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\QuickSorterTests.cpp.obj: ..\Google_tests\QuickSorterTests.cpp
+Google_tests\CMakeFiles\Google_Tests_run.dir\QuickSorterTests.cpp.obj: ..\Google_tests\TestUtils.cpp
+
+Google_tests\CMakeFiles\Google_Tests_run.dir\TestUtils.cpp.obj: ..\Google_tests\TestUtils.cpp
 
