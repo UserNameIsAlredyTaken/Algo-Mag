@@ -360,9 +360,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Projects/Algo-Mag/P1/Google_tests/AbsoluteDateTest.cpp">
-			<Option target="Google_Tests_run"/>
-		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1/Google_tests/ConverterTests.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>

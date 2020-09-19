@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Projects/Algo-Mag/P1/Google_tests/AbsoluteDateTest.cpp" "C:/Projects/Algo-Mag/P1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/AbsoluteDateTest.cpp.obj"
   "C:/Projects/Algo-Mag/P1/Google_tests/ConverterTests.cpp" "C:/Projects/Algo-Mag/P1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/ConverterTests.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

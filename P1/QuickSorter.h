@@ -15,4 +15,3 @@ private:
     T* median(T* a, T* b, T* c, Compare comp);
 };
 
-

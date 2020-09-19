@@ -65,17 +65,17 @@ void sort(T* first, T* last, Compare comp) {
 
 int main() {
 
-    int a[5]{1, 2, -3, 756, 99};
-    float b[5]{1.9, 2.4, -3, 756.56, 99.7};
+//    int a[5]{1, 2, -3, 756, 99};
+//    float b[5]{1.9, 2.4, -3, 756.56, 99.7};
 //    sort(b, b + 4, []( int a, int b) { return a > b; });
-
-    QuickSorter* sorter = new QuickSorter();
-
-    sorter->sort(b, b + 4, []( int a, int b) { return a > b; });
-
-    for(int i = 0; i < 5; ++i){
-        std::cout << *(b + i) << std::endl;
-    }
+//
+//    QuickSorter* sorter = new QuickSorter();
+//
+//    sorter->sort(b, b + 4, []( int a, int b) { return a > b; });
+//
+//    for(int i = 0; i < 5; ++i){
+//        std::cout << *(b + i) << std::endl;
+//    }
 
     return 0;
 }

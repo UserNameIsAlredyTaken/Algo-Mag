@@ -177,39 +177,6 @@ Google_Tests_run\fast:
 	cd C:\Projects\Algo-Mag\P1\cmake-build-debug\Google_tests
 .PHONY : Google_Tests_run\fast
 
-AbsoluteDateTest.obj: AbsoluteDateTest.cpp.obj
-
-.PHONY : AbsoluteDateTest.obj
-
-# target to build an object file
-AbsoluteDateTest.cpp.obj:
-	cd C:\Projects\Algo-Mag\P1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\AbsoluteDateTest.cpp.obj
-	cd C:\Projects\Algo-Mag\P1\cmake-build-debug\Google_tests
-.PHONY : AbsoluteDateTest.cpp.obj
-
-AbsoluteDateTest.i: AbsoluteDateTest.cpp.i
-
-.PHONY : AbsoluteDateTest.i
-
-# target to preprocess a source file
-AbsoluteDateTest.cpp.i:
-	cd C:\Projects\Algo-Mag\P1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\AbsoluteDateTest.cpp.i
-	cd C:\Projects\Algo-Mag\P1\cmake-build-debug\Google_tests
-.PHONY : AbsoluteDateTest.cpp.i
-
-AbsoluteDateTest.s: AbsoluteDateTest.cpp.s
-
-.PHONY : AbsoluteDateTest.s
-
-# target to generate assembly for a file
-AbsoluteDateTest.cpp.s:
-	cd C:\Projects\Algo-Mag\P1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\AbsoluteDateTest.cpp.s
-	cd C:\Projects\Algo-Mag\P1\cmake-build-debug\Google_tests
-.PHONY : AbsoluteDateTest.cpp.s
-
 ConverterTests.obj: ConverterTests.cpp.obj
 
 .PHONY : ConverterTests.obj
@@ -255,9 +222,6 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... Google_Tests_run
-	@echo ... AbsoluteDateTest.obj
-	@echo ... AbsoluteDateTest.i
-	@echo ... AbsoluteDateTest.s
 	@echo ... ConverterTests.obj
 	@echo ... ConverterTests.i
 	@echo ... ConverterTests.s
