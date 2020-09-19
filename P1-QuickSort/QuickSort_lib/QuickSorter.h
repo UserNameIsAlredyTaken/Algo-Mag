@@ -1,4 +1,4 @@
-#define INSERTION_SORT_THRESHOLD 5000
+#define INSERTION_SORT_THRESHOLD 50000
 
 template<typename T, typename Compare>
 void sort(T* first, T* last, Compare comp);

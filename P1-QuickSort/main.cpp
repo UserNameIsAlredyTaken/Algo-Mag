@@ -21,8 +21,8 @@ int main() {
     {
         auto start = std::chrono::high_resolution_clock::now();
 
-//        sort(array, array + size - 1, [](int a, int b) { return a < b; });
-        std::sort(array,array + size - 1);
+        sort(array, array + size - 1, [](int a, int b) { return a < b; });
+//        std::sort(array,array + size - 1);
 //        insertionSort(array, size, [](int a, int b) { return a < b; });
 
         auto end = std::chrono::high_resolution_clock::now();

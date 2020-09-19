@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../QuickSort_lib/QuickSorter.cpp
+QuickSorter.h
+../QuickSort_lib/QuickSorter.h
+
+../QuickSort_lib/QuickSorter.h
+
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp
+map
+-
+
+C:/Projects/Algo-Mag/P1-QuickSort/main.cpp
+iostream
+-
+QuickSorter.h
+C:/Projects/Algo-Mag/P1-QuickSort/QuickSorter.h
+QuickSorter.cpp
+C:/Projects/Algo-Mag/P1-QuickSort/QuickSorter.cpp
+random
+-
+chrono
+-
+Google_tests/TestUtils.cpp
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp
+
