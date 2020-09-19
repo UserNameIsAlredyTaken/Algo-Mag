@@ -5,8 +5,8 @@
 
 
 TEST(QuickSorterFixture, IntTestLess){
-    int size = 10000;
-    int* array;
+    static const int size = 10000;
+    int array[size];
     initRandomArr(array, size);
     std::map<int, int> table = initTable(array, size);
 
@@ -17,8 +17,8 @@ TEST(QuickSorterFixture, IntTestLess){
 }
 
 TEST(QuickSorterFixture, IntTestGreater){
-    int size = 10000;
-    int* array;
+    static const int size = 10000;
+    int array[size];
     initRandomArr(array, size);
     std::map<int, int> table = initTable(array, size);
 
@@ -29,10 +29,10 @@ TEST(QuickSorterFixture, IntTestGreater){
 }
 
 TEST(QuickSorterFixture, FloatTestLess){
-    int size = 10000;
-    int* array;
+    static const int size = 10000;
+    float array[size];
     initRandomArr(array, size);
-    std::map<int, int> table = initTable(array, size);
+    std::map<float, int> table = initTable(array, size);
 
     sort(array,array + size - 1, [](int a, int b) { return a < b; });
 
@@ -41,8 +41,8 @@ TEST(QuickSorterFixture, FloatTestLess){
 }
 
 TEST(QuickSorterFixture, FloatTestGreater){
-    int size = 10000;
-    float* array;
+    static const int size = 10000;
+    float array[size];
     initRandomArr(array, size);
     std::map<float, int> table = initTable(array, size);
 

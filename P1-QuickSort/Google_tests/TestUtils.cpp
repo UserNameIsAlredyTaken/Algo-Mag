@@ -3,6 +3,7 @@
 //
 
 #include <map>
+#include "QuickSorter.h"
 
 template<typename T, typename Compare>
 bool checkArr(T* array, int size, Compare comp)
@@ -48,17 +49,23 @@ bool checkTable(T* array, int size, std::map<T, int> table)
 }
 
 template<typename T>
-void initRandomArr(T*& array, int size)
+void shuffleArr(T* array, int size)
 {
-    array = new T[size];
-    for(int i = 0; i < size; ++i)
-    {
-        array[i] = (T)i;
-    }
-
     for(int i = 0; i < size; ++i)
     {
         static const double fraction = 1.0 / (static_cast<double>(RAND_MAX) + 1.0);
         swap(array + i, array + static_cast<int>(rand() * fraction * (size)));
     }
+}
+
+template<typename T>
+void initRandomArr(T* array, int size)
+{
+    for(int i = 0; i < size; ++i)
+    {
+        array[i] = (T)i;
+    }
+
+    shuffleArr(array, size);
+
 }

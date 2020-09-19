@@ -9,10 +9,10 @@
 int main() {
 
     int measurements = 1000;
-    int size = 100000;
+    static const int size = 100000;
 //    int size = 10;
 //    int array[10] = {0,9,4,3,7,1,2,8,6,5};
-    int* array;
+    int array[size];
     initRandomArr(array, size);
 
     long double time = 0;
@@ -29,9 +29,11 @@ int main() {
         time += (end - start).count();
 
         std::cout << "iteration: " << i << std::endl;
+
+        shuffleArr(array, size);
     }
     std::cout << "time: " << time << std::endl;
-    std::cout << "crono: " << time / measurements << std::endl;
+    std::cout << "chrono: " << time / measurements << std::endl;
 
     return 0;
 }
