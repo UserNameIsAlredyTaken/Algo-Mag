@@ -1,4 +1,4 @@
-#define INSERTION_SORT_THRESHOLD 10
+#define INSERTION_SORT_THRESHOLD 5000
 
 //
 //class QuickSorter{

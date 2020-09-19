@@ -9,12 +9,12 @@ void /*QuickSorter::*/sort(T *first, T *last, Compare comp)
     {
         T* pivot = partition<T>(first, last, comp);
 
-        if(pivot - first < last - pivot){
-            sort(pivot, last, comp);
-            last = pivot - 1; //tail recursion optimization
+        if(pivot - first + 1 < last - pivot){
+            sort(pivot + 1, last, comp);
+            last = pivot; //tail recursion optimization
         }else{
-            sort(first, pivot - 1, comp);
-            first = pivot; //tail recursion optimization
+            sort(first, pivot, comp);
+            first = pivot + 1; //tail recursion optimization
         }
     }
 

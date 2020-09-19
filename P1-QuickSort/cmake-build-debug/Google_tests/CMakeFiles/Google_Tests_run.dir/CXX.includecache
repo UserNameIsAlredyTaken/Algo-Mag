@@ -332,11 +332,11 @@ QuickSorter.h
 
 ../QuickSort_lib/QuickSorter.h
 
-C:/Projects/DateConverter_withTests-master/P1-QuickSort/Google_tests/QuickSorterTests.cpp
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/QuickSorterTests.cpp
 gtest/gtest.h
-C:/Projects/DateConverter_withTests-master/P1-QuickSort/Google_tests/gtest/gtest.h
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/gtest/gtest.h
 QuickSorter.cpp
-C:/Projects/DateConverter_withTests-master/P1-QuickSort/Google_tests/QuickSorter.cpp
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/QuickSorter.cpp
 random
 -
 chrono
