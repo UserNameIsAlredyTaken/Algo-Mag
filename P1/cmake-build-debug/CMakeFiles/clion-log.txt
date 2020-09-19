@@ -1,5 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" C:\Projects\Algo-Mag\P1
--- Could NOT find PythonInterp (missing: PYTHON_EXECUTABLE) 
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Projects/Algo-Mag/P1/cmake-build-debug
