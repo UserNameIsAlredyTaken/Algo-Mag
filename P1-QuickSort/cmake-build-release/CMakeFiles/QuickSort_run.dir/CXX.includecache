@@ -29,6 +29,10 @@ random
 -
 chrono
 -
+windows.h
+-
+profileapi.h
+-
 Google_tests/TestUtils.cpp
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp
 
