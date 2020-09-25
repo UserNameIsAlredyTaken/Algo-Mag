@@ -26,7 +26,8 @@ int main() {
 
         for (int i = 0; i < measurements; i++)
         {
-            shuffleArr(array, currentSize);
+//            shuffleArr(array, currentSize);
+            sort(array, array + currentSize - 1, [](int a, int b) { return a > b; });
 
             QueryPerformanceFrequency(&Frequency);
             QueryPerformanceCounter(&StartingTime);
@@ -54,7 +55,8 @@ int main() {
 
         for (int i = 0; i < measurements; i++)
         {
-            shuffleArr(array, currentSize);
+//            shuffleArr(array, currentSize);
+            sort(array, array + currentSize - 1, [](int a, int b) { return a > b; });
 
             QueryPerformanceFrequency(&Frequency);
             QueryPerformanceCounter(&StartingTime);
