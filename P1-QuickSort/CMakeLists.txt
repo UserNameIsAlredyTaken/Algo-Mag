@@ -7,9 +7,13 @@ set(SOURCE_FILES main.cpp)
 add_executable(QuickSort_run ${SOURCE_FILES})
 
 include_directories(QuickSort_lib)
+include_directories(Containers_lib)
 add_subdirectory(QuickSort_lib)
+add_subdirectory(Containers_lib)
+
 
 target_link_libraries(QuickSort_run QuickSort_lib)
+target_link_libraries(QuickSort_run Containers_lib)
 
 add_subdirectory(Google_tests)
 

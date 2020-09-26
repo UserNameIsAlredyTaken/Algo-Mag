@@ -11,11 +11,13 @@ set(CMAKE_CXX_COMPILER_ID "MSVC")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../QuickSort_lib"
+  "../Containers_lib"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/QuickSort_lib/CMakeFiles/QuickSort_lib.dir/DependInfo.cmake"
+  "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Containers_lib/CMakeFiles/Containers_lib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

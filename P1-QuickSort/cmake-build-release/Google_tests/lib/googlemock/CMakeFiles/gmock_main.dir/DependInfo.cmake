@@ -13,6 +13,7 @@ set(CMAKE_CXX_COMPILER_ID "MSVC")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../QuickSort_lib"
+  "../Containers_lib"
   "../Google_tests/lib/googlemock/include"
   "../Google_tests/lib/googlemock"
   "../Google_tests/lib/googletest/include"

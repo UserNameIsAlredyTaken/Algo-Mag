@@ -6,5 +6,5 @@ CXX_FLAGS = /DWIN32 /D_WINDOWS /W4 /GR  /MDd /Zi /Ob0 /Od /RTC1   -GS -W4 -WX -w
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -IC:\Projects\Algo-Mag\P1-QuickSort\QuickSort_lib -IC:\Projects\Algo-Mag\P1-QuickSort\Google_tests\lib\googlemock\include -IC:\Projects\Algo-Mag\P1-QuickSort\Google_tests\lib\googlemock -IC:\Projects\Algo-Mag\P1-QuickSort\Google_tests\lib\googletest\include -IC:\Projects\Algo-Mag\P1-QuickSort\Google_tests\lib\googletest 
+CXX_INCLUDES = -IC:\Projects\Algo-Mag\P1-QuickSort\QuickSort_lib -IC:\Projects\Algo-Mag\P1-QuickSort\Containers_lib -IC:\Projects\Algo-Mag\P1-QuickSort\Google_tests\lib\googlemock\include -IC:\Projects\Algo-Mag\P1-QuickSort\Google_tests\lib\googlemock -IC:\Projects\Algo-Mag\P1-QuickSort\Google_tests\lib\googletest\include -IC:\Projects\Algo-Mag\P1-QuickSort\Google_tests\lib\googletest 
 

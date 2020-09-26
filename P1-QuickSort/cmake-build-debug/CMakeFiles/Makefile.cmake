@@ -40,6 +40,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/JetBrains/CLion 2020.2.3/bin/cmake/win/share/cmake-3.17/Modules/ProcessorCount.cmake"
   "C:/Program Files/JetBrains/CLion 2020.2.3/bin/cmake/win/share/cmake-3.17/Modules/WriteBasicConfigVersionFile.cmake"
   "../CMakeLists.txt"
+  "../Containers_lib/CMakeLists.txt"
   "../Google_tests/CMakeLists.txt"
   "../Google_tests/lib/CMakeLists.txt"
   "../Google_tests/lib/googlemock/CMakeLists.txt"
@@ -67,6 +68,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "QuickSort_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Containers_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Google_tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Google_tests/lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Google_tests/lib/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -77,6 +79,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/QuickSort_run.dir/DependInfo.cmake"
   "QuickSort_lib/CMakeFiles/QuickSort_lib.dir/DependInfo.cmake"
+  "Containers_lib/CMakeFiles/Containers_lib.dir/DependInfo.cmake"
   "Google_tests/CMakeFiles/Google_Tests_run.dir/DependInfo.cmake"
   "Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "Google_tests/lib/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"

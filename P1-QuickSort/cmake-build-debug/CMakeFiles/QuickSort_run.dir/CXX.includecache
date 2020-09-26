@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+../Containers_lib/Array.h
+utility
+-
+
 ../QuickSort_lib/QuickSorter.cpp
 QuickSorter.h
 ../QuickSort_lib/QuickSorter.h
@@ -29,6 +33,12 @@ random
 -
 chrono
 -
+windows.h
+-
+profileapi.h
+-
 Google_tests/TestUtils.cpp
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp
+Array.h
+C:/Projects/Algo-Mag/P1-QuickSort/Array.h
 

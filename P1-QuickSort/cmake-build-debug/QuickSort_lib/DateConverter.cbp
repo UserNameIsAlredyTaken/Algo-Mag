@@ -5,7 +5,7 @@
 		<Option title="DateConverter"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;CMake Files\QuickSort_lib\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\QuickSort_lib\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;CMake Files\Containers_lib\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/QuickSort_lib"/>
@@ -25,6 +25,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
@@ -48,6 +49,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
@@ -105,6 +107,9 @@
 		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Containers_lib\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

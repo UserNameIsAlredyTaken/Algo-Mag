@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+../Containers_lib/Array.h
+utility
+-
+
 ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
 ../Google_tests/lib/googletest/include/gtest/gtest/internal/gtest-death-test-internal.h
@@ -326,25 +330,9 @@ cxxabi.h
 acxx_demangle.h
 -
 
-../QuickSort_lib/QuickSorter.cpp
-QuickSorter.h
-../QuickSort_lib/QuickSorter.h
-
-../QuickSort_lib/QuickSorter.h
-
-C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/QuickSorterTests.cpp
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ArrayTest.cpp
 gtest/gtest.h
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/gtest/gtest.h
-TestUtils.cpp
-C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp
-QuickSorter.cpp
-C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/QuickSorter.cpp
-numeric
--
-
-C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp
-map
--
-QuickSorter.h
-C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/QuickSorter.h
+Array.h
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/Array.h
 
