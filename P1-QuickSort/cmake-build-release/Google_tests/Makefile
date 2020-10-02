@@ -210,6 +210,39 @@ ArrayTest.cpp.s:
 	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
 .PHONY : ArrayTest.cpp.s
 
+ListTest.obj: ListTest.cpp.obj
+
+.PHONY : ListTest.obj
+
+# target to build an object file
+ListTest.cpp.obj:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\ListTest.cpp.obj
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
+.PHONY : ListTest.cpp.obj
+
+ListTest.i: ListTest.cpp.i
+
+.PHONY : ListTest.i
+
+# target to preprocess a source file
+ListTest.cpp.i:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\ListTest.cpp.i
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
+.PHONY : ListTest.cpp.i
+
+ListTest.s: ListTest.cpp.s
+
+.PHONY : ListTest.s
+
+# target to generate assembly for a file
+ListTest.cpp.s:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\ListTest.cpp.s
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
+.PHONY : ListTest.cpp.s
+
 QuickSorterTests.obj: QuickSorterTests.cpp.obj
 
 .PHONY : QuickSorterTests.obj
@@ -291,6 +324,9 @@ help:
 	@echo ... ArrayTest.obj
 	@echo ... ArrayTest.i
 	@echo ... ArrayTest.s
+	@echo ... ListTest.obj
+	@echo ... ListTest.i
+	@echo ... ListTest.s
 	@echo ... QuickSorterTests.obj
 	@echo ... QuickSorterTests.i
 	@echo ... QuickSorterTests.s

@@ -6,8 +6,14 @@
 
 #IncludeRegexTransform: 
 
-../Containers_lib/Array.h
-utility
+../Containers_lib/List.h
+../Exception.h
+../Exception.h
+
+../Exception.h
+exception
+-
+string
 -
 
 ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
@@ -330,9 +336,9 @@ cxxabi.h
 acxx_demangle.h
 -
 
-C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ArrayTest.cpp
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ListTest.cpp
 gtest/gtest.h
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/gtest/gtest.h
-Array.h
-C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/Array.h
+List.h
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/List.h
 

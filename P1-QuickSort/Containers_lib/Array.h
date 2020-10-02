@@ -2,6 +2,7 @@
 // Created by danil on 25.09.2020.
 //
 #include <utility>
+#include "../Exception.h"
 
 #define INITIAL_SIZE 16
 #define CAPACITY_MUL 2
@@ -22,10 +23,10 @@ private:
     class Iterator{
     private:
         int current_index;
-        Array<T>& iterated;
+        Array<T>* iterated;
 
     public:
-        Iterator(Array<T>& iterated) : iterated(iterated), current_index(0){}
+        Iterator(Array<T>* iterated) : iterated(iterated), current_index(0){}
 
         const T& get() const ;
         void set( const T& value);
@@ -35,7 +36,10 @@ private:
         void prev();
         void toIndex( int index);
         bool hasNext() const ;
+//        bool hasNoNext() const ;
         bool hasPrev() const ;
+//        bool isLast() const ;
+//        bool isFirst() const ;
     };
 
     void redistribute();
@@ -146,7 +150,7 @@ template<typename T>
 void Array<T>::insert(int index, const T &value) {
     if(index > length)
     {
-        throw "insertion index is more then array length";
+        throw Exception("insertion index is more then array length");
     }
 
     if(length + 1 > capacity)
@@ -178,7 +182,7 @@ int Array<T>::size() const
 template<typename T>
 const T& Array<T>::operator []( int index) const
 {
-    if(index >= length) throw "index is more then length";
+    if(index >= length) throw Exception("index is more then length");
     return array[index];
 }
 
@@ -186,7 +190,7 @@ template<typename T>
 T& Array<T>::operator []( int index){
     if(index >= length)
     {
-        throw "index is more then length";
+        throw Exception("index is more then length");
     }
     return array[index];
 }
@@ -195,7 +199,7 @@ template<typename T>
 void Array<T>::remove( int index){
     if(index > length)
     {
-        throw "insertion index is more then array length";
+        throw Exception("insertion index is more then array length");
     }
 
     for (int i = index; i < length; ++i) ////move elements to make space for new element
@@ -220,24 +224,24 @@ const typename Array<T>::Iterator Array<T>::iterator() const
 
 template<typename T>
 const T& Array<T>::Iterator::get() const{
-    return iterated[current_index];
+    return (*iterated)[current_index];
 }
 
 template<typename T>
 void Array<T>::Iterator::set( const T& value){
-    iterated[current_index] = value;
+    (*iterated)[current_index] = value;
 }
 
 template<typename T>
 void Array<T>::Iterator::insert( const T& value)
 {
-    iterated.insert(current_index, value);
+    iterated->insert(current_index, value);
 }
 
 template<typename T>
 void Array<T>::Iterator::remove()
 {
-    iterated.remove(current_index);
+    iterated->remove(current_index);
 }
 
 template<typename T>
@@ -245,11 +249,11 @@ void Array<T>::Iterator::next()
 {
     if(hasNext())
     {
-        throw "iterator points on last element";
+        ++current_index;
     }
     else
     {
-        ++current_index;
+        throw Exception("iterator points on last element");
     }
 }
 
@@ -258,31 +262,33 @@ void Array<T>::Iterator::prev()
 {
     if(hasPrev())
     {
-        throw "iterator points on first element";
+        --current_index;
     }
     else
     {
-        --current_index;
+        throw Exception("iterator points on first element");
     }
 }
 
 template<typename T>
 void Array<T>::Iterator::toIndex( int index)
 {
-    if(index >= 0 && index < iterated.length)
+    if(index >= 0 && index < iterated->length)
     {
         current_index = index;
     }
     else
     {
-        throw "index not in bounds";
+        throw Exception("index not in bounds");
     }
 }
 
+
+////changed hasNext and nahPrev to isLast and isFirst
 template<typename T>
 bool Array<T>::Iterator::hasNext() const
 {
-    return current_index + 1 < iterated.length;
+    return current_index < iterated->length - 1;
 }
 
 template<typename T>
@@ -290,6 +296,24 @@ bool Array<T>::Iterator::hasPrev() const
 {
     return current_index >= 1;
 }
+
+//template<typename T>
+//bool Array<T>::Iterator::isLast() const
+//{
+//    return current_index == iterated->length - 1;
+//}
+//
+//template<typename T>
+//bool Array<T>::Iterator::isFirst() const
+//{
+//    return current_index == 0;
+//}
+//
+//template<typename T>
+//bool Array<T>::Iterator::hasNoNext() const
+//{
+//    return current_index >= iterated->length;
+//}
 
 
 

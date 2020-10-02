@@ -492,7 +492,13 @@
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/List.h">
 			<Option target="Containers_lib"/>
 		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Exception.h">
+			<Option target="QuickSort_run"/>
+		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ArrayTest.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ListTest.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/QuickSorterTests.cpp">
