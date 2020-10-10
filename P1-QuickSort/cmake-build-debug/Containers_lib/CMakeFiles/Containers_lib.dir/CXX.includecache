@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/Array.h
+utility
+-
+../Exception.h
+C:/Projects/Algo-Mag/P1-QuickSort/Exception.h
+
 C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/List.cpp
 List.h
 C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/List.h
@@ -13,6 +19,8 @@ C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/List.h
 C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/List.h
 ../Exception.h
 C:/Projects/Algo-Mag/P1-QuickSort/Exception.h
+Array.h
+C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/Array.h
 
 C:/Projects/Algo-Mag/P1-QuickSort/Exception.h
 exception

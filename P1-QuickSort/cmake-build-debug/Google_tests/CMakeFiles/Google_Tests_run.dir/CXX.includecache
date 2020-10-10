@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
+../Containers_lib/Array.h
+utility
+-
+../Exception.h
+../Exception.h
+
 ../Containers_lib/List.h
 ../Exception.h
 ../Exception.h
+Array.h
+../Containers_lib/Array.h
 
 ../Exception.h
 exception

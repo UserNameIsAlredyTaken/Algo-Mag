@@ -7,6 +7,8 @@
 
 
 #include "../Exception.h"
+#include "Array.h"
+#define MAX_CHUNK_LENGTH 8
 
 template < typename T>
 class List final {
@@ -19,24 +21,26 @@ private:
             next = nullptr;
             prev = nullptr;
         }
-        Chunk(const T& value){
-            this->value = value;
-            next = nullptr;
-            prev = nullptr;
-        }
+//        Chunk(const T& value){
+//            this->value = value;
+//            next = nullptr;
+//            prev = nullptr;
+//        }
 
-        T value;
+        Array<T> array;
         Chunk* next;
         Chunk* prev;
     };
 
     class Iterator{
-    private:
+//TODO:    private:
+    public:
         List<T>* iterated;
         Chunk* current_chunk;
+        int current_index;
 
     public:
-        Iterator(List<T>* iterated) : iterated(iterated), current_chunk(iterated->tail_chunk){}
+        Iterator(List<T>* iterated) : iterated(iterated), current_chunk(iterated->tail_chunk), current_index(0){}
 
         const T& get() const ;
         void set( const T& value);
@@ -90,68 +94,80 @@ List<T>::~List(){
 template<typename T>
 void List<T>::insertHead( const T& value)
 {
-    Chunk* chunk = new Chunk(value);
-    if(length == 0)
+    if(head_chunk->array.size() < MAX_CHUNK_LENGTH)
     {
-        head_chunk->value = value;
-        length = 1;
+        head_chunk->array.insert(value);
     }
     else
     {
+        Chunk* chunk = new Chunk();
+        chunk->array.insert(value);
+
         chunk->prev = head_chunk;
         head_chunk->next = chunk;
         head_chunk = chunk;
-        ++length;
     }
+    ++length;
 }
 
 template<typename T>
 void List<T>::insertTail(const T &value)
 {
-    Chunk* chunk = new Chunk(value);
-    if(length == 0){
-        tail_chunk->value = value;
-        length = 1;
-    }else{
+
+    if(tail_chunk->array.size() < MAX_CHUNK_LENGTH)
+    {
+        tail_chunk->array.insert(0, value);
+    }
+    else
+    {
+        Chunk* chunk = new Chunk();
+        chunk->array.insert(0, value);
+
         chunk->next = tail_chunk;
         tail_chunk->prev = chunk;
         tail_chunk = chunk;
-        ++length;
     }
+    ++length;
 }
 
 template<typename T>
 void List<T>::removeHead()
 {
-    if(!head_chunk->prev) return; ////do not delete last
+    head_chunk->array.remove(head_chunk->array.size() - 1);
+    if(head_chunk->array.size() == 0 && head_chunk->prev) ////do not delete last
+    {
+        head_chunk = head_chunk->prev;
+        delete head_chunk->next;
+        head_chunk->next = nullptr;
+    }
 
-    head_chunk = head_chunk->prev;
-    delete head_chunk->next;
-    head_chunk->next = nullptr;
     --length;
 }
 
 template<typename T>
 void List<T>::removeTail()
 {
-    if(!tail_chunk->next) return; ////do not delete last
+    tail_chunk->array.remove(0);
+    if(tail_chunk->array.size() == 0 && tail_chunk->next)////do not delete last
+    {
+        tail_chunk = tail_chunk->next;
+        delete tail_chunk->prev;
+        tail_chunk->prev = nullptr;
+    }
 
-    tail_chunk = tail_chunk->next;
-    delete tail_chunk->prev;
-    tail_chunk->prev = nullptr;
     --length;
 }
 
 template<typename T>
 const T& List<T>::head() const
 {
-    return head_chunk->value;
+    return head_chunk->array[head_chunk->array.size() - 1];
 }
 
 template<typename T>
 const T& List<T>::tail() const
 {
-    return tail_chunk->value;
+    return tail_chunk->array[0];
 }
 
 template<typename T>
@@ -176,44 +192,53 @@ const typename List<T>::Iterator List<T>::iterator() const
 template<typename T>
 const T& List<T>::Iterator::get() const
 {
-    return current_chunk->value;
+    return current_chunk->array[current_index];
 }
 
 template<typename T>
 void List<T>::Iterator::set( const T& value){
-    current_chunk->value = value;
+    current_chunk->array[current_index] = value;
 }
 
 template<typename T>
 void List<T>::Iterator::insert( const T& value)
 {
-    if(iterated->length == 0)
+    current_chunk->array.insert(current_index, value);
+    if(current_chunk->array.size() > MAX_CHUNK_LENGTH - 1)
     {
-        current_chunk->value = value;
-        iterated->length = 1;
+        Chunk* chunk = new Chunk();
+        chunk->array.insert(current_chunk->array[MAX_CHUNK_LENGTH - 1]); ////move last element of current chunk
+        current_chunk->array.remove(MAX_CHUNK_LENGTH - 1); ////to new chunk
+
+        chunk->prev = current_chunk;
+        chunk->next = current_chunk->next;
+        if(current_chunk->next)
+            current_chunk->next->prev = chunk;
+        current_chunk->next = chunk;
+
+        if(iterated->head_chunk == current_chunk)
+            iterated->head_chunk = chunk;
     }
-    else
-    {
-        Chunk* chunk = new Chunk(value);
-        chunk->prev = current_chunk->prev;
-        chunk->next = current_chunk;
-        current_chunk->prev->next = chunk;
-        current_chunk->prev = chunk;
-        ++iterated->length;
-    }
+    this->next();
+    ++iterated->length;
 }
 
 template<typename T>
 void List<T>::Iterator::remove()
 {
-    if(iterated->length == 0) return;
+    current_chunk->array.remove(current_index);
+    if(current_chunk->array.size() == 0 && iterated->length != 0) ////do not delete last
+    {
+        current_chunk->prev->next = current_chunk->next;
+        current_chunk->next->prev = current_chunk->prev;
 
-    current_chunk->prev->next = current_chunk->next;
-    current_chunk->next->prev = current_chunk->prev;
+        Chunk* temp = current_chunk;
+        current_chunk = current_chunk->next;
+        delete temp;
 
-    Chunk* temp = current_chunk;
-    current_chunk = current_chunk->next;
-    delete temp;
+        current_index = 0;
+    }
+
     --iterated->length;
 }
 
@@ -222,7 +247,15 @@ void List<T>::Iterator::next()
 {
     if(hasNext())
     {
-        current_chunk = current_chunk->next;
+        if(current_index < current_chunk->array.size() - 1)
+        {
+            ++current_index;
+        }
+        else
+        {
+            current_chunk = current_chunk->next;
+            current_index = 0;
+        }
     }
     else
     {
@@ -235,7 +268,15 @@ void List<T>::Iterator::prev()
 {
     if(hasPrev())
     {
-        current_chunk = current_chunk->prev;
+        if(current_index > 0)
+        {
+            --current_index;
+        }
+        else
+        {
+            current_chunk = current_chunk->prev;
+            current_index = current_chunk->array.size() - 1;
+        }
     }
     else
     {
@@ -246,13 +287,15 @@ void List<T>::Iterator::prev()
 template<typename T>
 bool List<T>::Iterator::hasNext() const
 {
-    return current_chunk->next != nullptr;
+    return current_index < current_chunk->array.size() - 1 ||
+        current_chunk->next != nullptr;
 }
 
 template<typename T>
 bool List<T>::Iterator::hasPrev() const
 {
-    return current_chunk->prev != nullptr;
+    return current_index > 0 ||
+        current_chunk->prev != nullptr;
 }
 
 

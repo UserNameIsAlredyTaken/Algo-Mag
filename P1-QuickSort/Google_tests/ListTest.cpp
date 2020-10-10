@@ -170,10 +170,11 @@ TEST(ListFixture, IteratorSetTest){
     EXPECT_EQ(itt.get(), counter);
 
 
+
     List< float > b;
     for( int i = 0; i < 10; ++i)
     {
-        a.insertHead(0);
+        b.insertHead(0);
     }
     counter = 0;
     auto itB = b.iterator();
