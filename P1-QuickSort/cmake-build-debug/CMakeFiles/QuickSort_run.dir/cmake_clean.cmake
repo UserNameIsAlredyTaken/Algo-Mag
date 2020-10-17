@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/QuickSort_run.dir/Dictionary/Dictionary.cpp.obj"
   "CMakeFiles/QuickSort_run.dir/main.cpp.obj"
   "QuickSort_run.exe"
   "QuickSort_run.exe.manifest"

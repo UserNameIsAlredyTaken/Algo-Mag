@@ -3,7 +3,7 @@ project(testing_test)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES main.cpp Exception.h)
+set(SOURCE_FILES main.cpp Exception.h Dictionary/Dictionary.cpp Dictionary/Dictionary.h)
 add_executable(QuickSort_run ${SOURCE_FILES})
 
 include_directories(QuickSort_lib)

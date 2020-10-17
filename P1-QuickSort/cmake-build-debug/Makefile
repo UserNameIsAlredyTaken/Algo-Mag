@@ -252,6 +252,33 @@ gtest_main\fast:
 	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build
 .PHONY : gtest_main\fast
 
+Dictionary\Dictionary.obj: Dictionary\Dictionary.cpp.obj
+
+.PHONY : Dictionary\Dictionary.obj
+
+# target to build an object file
+Dictionary\Dictionary.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Dictionary\Dictionary.cpp.obj
+.PHONY : Dictionary\Dictionary.cpp.obj
+
+Dictionary\Dictionary.i: Dictionary\Dictionary.cpp.i
+
+.PHONY : Dictionary\Dictionary.i
+
+# target to preprocess a source file
+Dictionary\Dictionary.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Dictionary\Dictionary.cpp.i
+.PHONY : Dictionary\Dictionary.cpp.i
+
+Dictionary\Dictionary.s: Dictionary\Dictionary.cpp.s
+
+.PHONY : Dictionary\Dictionary.s
+
+# target to generate assembly for a file
+Dictionary\Dictionary.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Dictionary\Dictionary.cpp.s
+.PHONY : Dictionary\Dictionary.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -298,6 +325,9 @@ help:
 	@echo ... gmock_main
 	@echo ... gtest
 	@echo ... gtest_main
+	@echo ... Dictionary/Dictionary.obj
+	@echo ... Dictionary/Dictionary.i
+	@echo ... Dictionary/Dictionary.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

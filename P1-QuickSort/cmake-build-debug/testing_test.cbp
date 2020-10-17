@@ -492,6 +492,12 @@
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/List.h">
 			<Option target="Containers_lib"/>
 		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.cpp">
+			<Option target="QuickSort_run"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h">
+			<Option target="QuickSort_run"/>
+		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Exception.h">
 			<Option target="QuickSort_run"/>
 		</Unit>
