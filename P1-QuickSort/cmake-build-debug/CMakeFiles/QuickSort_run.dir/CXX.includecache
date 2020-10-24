@@ -9,12 +9,36 @@
 ../Containers_lib/Array.h
 utility
 -
+../Exception.h
+../Exception.h
+
+../Exception.h
+exception
+-
+string
+-
 
 ../QuickSort_lib/QuickSorter.cpp
 QuickSorter.h
 ../QuickSort_lib/QuickSorter.h
 
 ../QuickSort_lib/QuickSorter.h
+
+C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.cpp
+Dictionary.h
+C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h
+
+C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h
+../Exception.h
+C:/Projects/Algo-Mag/P1-QuickSort/Exception.h
+stack
+-
+
+C:/Projects/Algo-Mag/P1-QuickSort/Exception.h
+exception
+-
+string
+-
 
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp
 map
@@ -41,4 +65,6 @@ Google_tests/TestUtils.cpp
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp
 Array.h
 C:/Projects/Algo-Mag/P1-QuickSort/Array.h
+Dictionary/Dictionary.h
+C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h
 

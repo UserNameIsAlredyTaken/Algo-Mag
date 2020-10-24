@@ -25,6 +25,32 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/ArrayTest.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
  C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ArrayTest.cpp
+Google_tests/CMakeFiles/Google_Tests_run.dir/DictionaryTest.cpp.obj
+ ../Containers_lib/Array.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-matchers.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-message.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-param-test.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-printers.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-test-part.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-typed-test.h
+ ../Google_tests/lib/googletest/include/gtest/gtest.h
+ ../Google_tests/lib/googletest/include/gtest/gtest_pred_impl.h
+ ../Google_tests/lib/googletest/include/gtest/gtest_prod.h
+ ../Google_tests/lib/googletest/include/gtest/internal/custom/gtest-port.h
+ ../Google_tests/lib/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-filepath.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-internal.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-param-util.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-port-arch.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+ ../QuickSort_lib/QuickSorter.h
+ C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h
+ C:/Projects/Algo-Mag/P1-QuickSort/Exception.h
+ C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/DictionaryTest.cpp
 Google_tests/CMakeFiles/Google_Tests_run.dir/ListTest.cpp.obj
  ../Containers_lib/Array.h
  ../Containers_lib/List.h

@@ -16,6 +16,7 @@ template < typename K, typename V>
 class Dictionary final
 {
 private:
+    class Iterator;
     class Node
     {
         K key;
@@ -24,6 +25,10 @@ private:
         Node* left;
         Node* right;
         Node(K k, V v) : key(k), value(v), height(1), left(nullptr), right(nullptr){}
+        Node() : height(1), left(nullptr), right(nullptr){}
+
+        friend Iterator;
+        friend Dictionary;
     };
 
     void delete_node_recursively(Node* n);
@@ -44,10 +49,10 @@ private:
 
     class Iterator{
     private:
-        Dictionary<K,V> iterated;
+        Dictionary<K,V>* iterated;
         Node* current;
-        std::stack<Node> nodes;
-        std::stack<Node> prev_nodes;
+        std::stack<Node*> nodes;
+        std::stack<Node*> prev_nodes;
     public:
         Iterator(Dictionary<K,V>* iterated);
 
@@ -83,7 +88,7 @@ void Dictionary<K, V>::delete_node_recursively(Node* node)
     if(node == nullptr)
         return;
     delete_node_recursively(node->left);
-    delete_node_recursively(node->rigth);
+    delete_node_recursively(node->right);
     delete node;
 }
 
@@ -127,7 +132,7 @@ template < typename K, typename V>
 typename Dictionary<K, V>::Node* Dictionary<K, V>::balance(Node* node)
 {
     fix_height(node);
-    if(blance_factor(node) == 2)
+    if(balance_factor(node) == 2)
     {
         if(balance_factor(node->right) < 0)
             node->right = rotate_right(node->right);
@@ -221,7 +226,7 @@ typename Dictionary<K, V>::Node* Dictionary<K, V>::find_key(Node *node, const K&
 
 
 template < typename K, typename V>
-Dictionary<K, V>::Dictionary() : root_node(nullptr), length(0){}
+Dictionary<K, V>::Dictionary() : length(0), root_node(new Node()){}
 
 template < typename K, typename V>
 Dictionary<K, V>::Dictionary(const Dictionary<K,V>& copiedDictionary)
@@ -262,12 +267,20 @@ Dictionary<K, V>::~Dictionary()
 template < typename K, typename V>
 void Dictionary<K, V>::put( const K& key, const V& value)
 {
-    insert_node_recursively(root_node, key, value);
+    if(length == 0){
+        root_node->key = key;
+        root_node->value = value;
+        ++length;
+    }
+    else
+    {
+        root_node = insert_node_recursively(root_node, key, value);
+    }
 }
 
 template<typename K, typename V>
 void Dictionary<K, V>::remove(const K& key) {
-    find_and_remove(root_node, key);
+    root_node = find_and_remove(root_node, key);
 }
 
 template<typename K, typename V>
@@ -290,7 +303,7 @@ V &Dictionary<K, V>::operator[](const K &key) {
     Node* found_node = find_key(root_node, key);
 
     if(found_node == nullptr){
-        found_node = insert_node_recursively(root_node, key);
+        found_node = insert_node_recursively(root_node, key, V());
     }
 
     return found_node->value;
@@ -307,10 +320,9 @@ int Dictionary<K, V>::size() const {
 template < typename K, typename V>
 Dictionary<K, V>::Iterator::Iterator(Dictionary<K,V>* iterated) : iterated(iterated), current(iterated->root_node)
 {
-    if(current->left != nullptr)
-        nodes.push(current->left);
-    if(current->right != nullptr)
-        nodes.push(current->right);
+    if(current == nullptr) return;
+
+    nodes.push(current);
 }
 
 template<typename K, typename V>
@@ -335,18 +347,20 @@ const V& Dictionary<K, V>::Iterator::get() const {
 
 template<typename K, typename V>
 void Dictionary<K, V>::Iterator::set(const V& value) {
-    return current->value = value;
+    current->value = value;
 }
 
 template<typename K, typename V>
 void Dictionary<K, V>::Iterator::next() {
     if(hasNext())
     {
-        current = nodes.pop();
         if(current->left != nullptr)
             nodes.push(current->left);
         if(current->right != nullptr)
             nodes.push(current->right);
+
+        current = nodes.top();
+        nodes.pop();
     }
     else
     {

@@ -3,7 +3,7 @@ add_subdirectory(lib)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 
-add_executable(Google_Tests_run QuickSorterTests.cpp TestUtils.cpp ArrayTest.cpp ListTest.cpp)
+add_executable(Google_Tests_run QuickSorterTests.cpp TestUtils.cpp ArrayTest.cpp ListTest.cpp DictionaryTest.cpp)
 
 target_link_libraries(Google_Tests_run QuickSort_lib)
 target_link_libraries(Google_Tests_run Containers_lib)

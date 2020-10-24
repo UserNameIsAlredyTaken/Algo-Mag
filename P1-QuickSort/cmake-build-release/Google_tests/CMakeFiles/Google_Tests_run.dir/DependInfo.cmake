@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ArrayTest.cpp" "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-release/Google_tests/CMakeFiles/Google_Tests_run.dir/ArrayTest.cpp.obj"
+  "C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/DictionaryTest.cpp" "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-release/Google_tests/CMakeFiles/Google_Tests_run.dir/DictionaryTest.cpp.obj"
   "C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ListTest.cpp" "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-release/Google_tests/CMakeFiles/Google_Tests_run.dir/ListTest.cpp.obj"
   "C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/QuickSorterTests.cpp" "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-release/Google_tests/CMakeFiles/Google_Tests_run.dir/QuickSorterTests.cpp.obj"
   "C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp" "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-release/Google_tests/CMakeFiles/Google_Tests_run.dir/TestUtils.cpp.obj"

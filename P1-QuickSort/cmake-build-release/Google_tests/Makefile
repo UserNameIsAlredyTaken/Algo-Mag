@@ -210,6 +210,39 @@ ArrayTest.cpp.s:
 	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
 .PHONY : ArrayTest.cpp.s
 
+DictionaryTest.obj: DictionaryTest.cpp.obj
+
+.PHONY : DictionaryTest.obj
+
+# target to build an object file
+DictionaryTest.cpp.obj:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\DictionaryTest.cpp.obj
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
+.PHONY : DictionaryTest.cpp.obj
+
+DictionaryTest.i: DictionaryTest.cpp.i
+
+.PHONY : DictionaryTest.i
+
+# target to preprocess a source file
+DictionaryTest.cpp.i:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\DictionaryTest.cpp.i
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
+.PHONY : DictionaryTest.cpp.i
+
+DictionaryTest.s: DictionaryTest.cpp.s
+
+.PHONY : DictionaryTest.s
+
+# target to generate assembly for a file
+DictionaryTest.cpp.s:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\DictionaryTest.cpp.s
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
+.PHONY : DictionaryTest.cpp.s
+
 ListTest.obj: ListTest.cpp.obj
 
 .PHONY : ListTest.obj
@@ -324,6 +357,9 @@ help:
 	@echo ... ArrayTest.obj
 	@echo ... ArrayTest.i
 	@echo ... ArrayTest.s
+	@echo ... DictionaryTest.obj
+	@echo ... DictionaryTest.i
+	@echo ... DictionaryTest.s
 	@echo ... ListTest.obj
 	@echo ... ListTest.i
 	@echo ... ListTest.s

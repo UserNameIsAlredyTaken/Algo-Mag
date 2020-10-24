@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Google_Tests_run.dir/ArrayTest.cpp.obj"
+  "CMakeFiles/Google_Tests_run.dir/DictionaryTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/ListTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/QuickSorterTests.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/TestUtils.cpp.obj"

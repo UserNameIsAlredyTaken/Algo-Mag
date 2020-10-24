@@ -289,6 +289,9 @@
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ArrayTest.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/DictionaryTest.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ListTest.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>

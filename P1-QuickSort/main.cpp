@@ -8,17 +8,18 @@
 #include <profileapi.h>
 #include "Google_tests/TestUtils.cpp"
 #include "Array.h"
+#include "Dictionary/Dictionary.h"
 
 
 int main() {
 
-    Array<int> arr;
-    std::cout << arr.size();
-
-    arr.insert(1);
+//    Array<int> arr;
+//    std::cout << arr.size();
+//
+//    arr.insert(1);
 
 //    arr[0] = 3;
-    std::cout << arr[0];
+//    std::cout << arr[0];
 //
 //
 //    for(int i = 0; i < arr.size(); ++i)
@@ -85,6 +86,13 @@ int main() {
 //        }
 //        std::cout << "Insertion = size: " << currentSize << " ;chrono: " << time / measurements << std::endl;
 //    }
+
+    Dictionary<std::string, int > npc;
+    npc.put("health", 10);
+    npc.put("armor", 20);
+    npc.put("ammo", 5);
+    for ( auto it = npc.iterator(); it.hasNext(); it.next())
+        std::cout << it.key() << " " << it.get() << std::endl;
 
     return 0;
 }
