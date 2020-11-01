@@ -43,6 +43,10 @@ private:
     Node* find_and_remove(Node* node, K k);
     Node* find_min_and_remove(Node* node, OUT Node* node_without_min);
     Node* find_key(Node* node, const K& key);
+    static Node* find_most_left(Node* node);
+    static Node* find_most_right(Node* node);
+    static Node* find_left_from_above(Node* node);
+    static Node* find_right_from_above(Node* node);
 
 
     int length;
@@ -175,12 +179,14 @@ typename Dictionary<K, V>::Node* Dictionary<K, V>::insert_node_recursively(Node*
     else if(key < node->key)
     {
         node->left = insert_node_recursively(node->left, key, value);
-        node->left->parent = node;
+        if(node->left)
+            node->left->parent = node;
     }
     else
     {
-        node->right = insert_node_recursively(node->left, key, value);
-        node->right->parent = node;
+        node->right = insert_node_recursively(node->right, key, value);
+        if(node->right)
+            node->right->parent = node;
     }
 
     return balance(node);
@@ -255,6 +261,46 @@ typename Dictionary<K, V>::Node* Dictionary<K, V>::find_key(Node *node, const K&
     }
     else
         return node;
+}
+
+template<typename K, typename V>
+typename Dictionary<K, V>::Node* Dictionary<K, V>::find_most_left(Node* node){
+    if(node->left != nullptr)
+        return find_most_left(node->left);
+
+    return node;
+}
+
+template<typename K, typename V>
+typename Dictionary<K, V>::Node* Dictionary<K, V>::find_most_right(Node* node){
+    if(node->right != nullptr)
+        return find_most_right(node->right);
+
+    return node;
+}
+
+template<typename K, typename V>
+typename Dictionary<K, V>::Node* Dictionary<K, V>::find_right_from_above(Node* node){
+    if(node->parent == nullptr)
+        return nullptr;
+
+    if(node->parent->right == node) //node is in right subtree
+        return find_right_from_above(node->parent);
+
+
+    return node->parent; //if node is in left subtree, parent is
+}
+
+template<typename K, typename V>
+typename Dictionary<K, V>::Node* Dictionary<K, V>::find_left_from_above(Node* node){
+    if(node->parent == nullptr)
+        return nullptr;
+
+    if(node->parent->left == node) //node is in left subtree
+        return find_left_from_above(node->parent);
+
+
+    return node->parent; //if node is in right subtree, parent is
 }
 
 
@@ -353,7 +399,9 @@ int Dictionary<K, V>::size() const {
 
 
 template < typename K, typename V>
-Dictionary<K, V>::Iterator::Iterator(Dictionary<K,V>* iterated) : iterated(iterated), current(iterated->root_node){}
+Dictionary<K, V>::Iterator::Iterator(Dictionary<K,V>* iterated) : iterated(iterated){
+    current = find_most_left(iterated->root_node);
+}
 
 template<typename K, typename V>
 typename Dictionary<K, V>::Iterator Dictionary<K, V>::iterator() {
@@ -384,7 +432,10 @@ template<typename K, typename V>
 void Dictionary<K, V>::Iterator::next() {
     if(hasNext())
     {
-
+        if(current->right)
+            current = find_most_left(current->right);
+        else
+            current = find_right_from_above(current);
     }
     else
     {
@@ -396,7 +447,10 @@ template<typename K, typename V>
 void Dictionary<K, V>::Iterator::prev() {
     if(hasPrev())
     {
-
+        if(current->left)
+            current = find_most_right(current->left);
+        else
+            current = find_left_from_above(current);
     }
     else
     {
@@ -405,13 +459,15 @@ void Dictionary<K, V>::Iterator::prev() {
 }
 
 template<typename K, typename V>
-bool Dictionary<K, V>::Iterator::hasNext() const {
-    return true;
+bool Dictionary<K, V>::Iterator::hasNext() const { //right node != null or (parent != null and this != parent's right node)
+    return (current->right != nullptr) ||
+        current->parent != nullptr && find_right_from_above(current);
 }
 
 template<typename K, typename V>
-bool Dictionary<K, V>::Iterator::hasPrev() const {
-    return true;
+bool Dictionary<K, V>::Iterator::hasPrev() const { //left node != null or (parent != null and this != parent's left node)
+    return (current->left != nullptr) ||
+           current->parent != nullptr && find_left_from_above(current);
 }
 
 

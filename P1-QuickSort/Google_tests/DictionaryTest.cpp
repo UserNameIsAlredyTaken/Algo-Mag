@@ -73,24 +73,62 @@ TEST(DictionaryFixture, IteratorSetTest){
     EXPECT_EQ(it.get(), 100);
 }
 
+
 TEST(DictionaryFixture, IteratorNextHasNextTest){
     Dictionary<std::string, int > npc;
     npc.put("health", 10);
     npc.put("armor", 20);
     npc.put("ammo", 5);
+    npc.put("cuteness", 99999);
 
-    std::string keys[3];
+    std::string keys[4];
     int i = 0;
-    for ( auto it = npc.iterator(); it.hasNext(); it.next())
+    for ( auto it = npc.iterator();; it.next())
     {
         keys[i] = it.key();
         ++i;
+        if(!it.hasNext())
+            break;
     }
 
-    std::sort(keys, keys + sizeof(keys)/sizeof(keys[0]));
+//    std::sort(keys, keys + sizeof(keys)/sizeof(keys[0]));
 
     EXPECT_EQ(keys[0], "ammo");
     EXPECT_EQ(keys[1], "armor");
-    EXPECT_EQ(keys[2], "health");
+    EXPECT_EQ(keys[2], "cuteness");
+    EXPECT_EQ(keys[3], "health");
+}
+
+TEST(DictionaryFixture, IteratorPrevHasPrevTest){
+    Dictionary<std::string, int > npc;
+    npc.put("health", 10);
+    npc.put("armor", 20);
+    npc.put("ammo", 5);
+    npc.put("cuteness", 99999);
+
+    std::string keys[4];
+    int i = 0;
+    auto it = npc.iterator();
+    for ( ;; it.next())
+    {
+        if(!it.hasNext())
+            break;
+    }
+
+    for (;;)
+    {
+        keys[i] = it.key();
+        ++i;
+        if(!it.hasPrev())
+            break;
+        it.prev();
+    }
+
+//    std::sort(keys, keys + sizeof(keys)/sizeof(keys[0]));
+
+    EXPECT_EQ(keys[3], "ammo");
+    EXPECT_EQ(keys[2], "armor");
+    EXPECT_EQ(keys[1], "cuteness");
+    EXPECT_EQ(keys[0], "health");
 }
 
