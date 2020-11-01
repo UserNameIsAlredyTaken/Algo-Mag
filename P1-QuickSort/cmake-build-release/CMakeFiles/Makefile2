@@ -283,8 +283,8 @@ Containers_lib\CMakeFiles\Containers_lib.dir\clean:
 # All Build rule for target.
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: QuickSort_lib\CMakeFiles\QuickSort_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: Containers_lib\CMakeFiles\Containers_lib.dir\all
-Google_tests\CMakeFiles\Google_Tests_run.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest.dir\all
 	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\depend
 	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\CMakeFiles --progress-num=4,5,6,7,8,9 "Built target Google_Tests_run"

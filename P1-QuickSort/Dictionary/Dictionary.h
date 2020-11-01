@@ -22,10 +22,11 @@ private:
         K key;
         V value;
         unsigned int height;
+        Node* parent;
         Node* left;
         Node* right;
-        Node(K k, V v) : key(k), value(v), height(1), left(nullptr), right(nullptr){}
-        Node() : height(1), left(nullptr), right(nullptr){}
+        Node(K k, V v) : key(k), value(v), height(1), parent(nullptr), left(nullptr), right(nullptr){}
+        Node() : height(1), parent(nullptr), left(nullptr), right(nullptr){}
 
         friend Iterator;
         friend Dictionary;
@@ -47,12 +48,10 @@ private:
     int length;
     Node* root_node;
 
-    class Iterator{
+    class Iterator{ //NLR
     private:
         Dictionary<K,V>* iterated;
         Node* current;
-        std::stack<Node*> nodes;
-        std::stack<Node*> prev_nodes;
     public:
         Iterator(Dictionary<K,V>* iterated);
 
@@ -89,6 +88,7 @@ void Dictionary<K, V>::delete_node_recursively(Node* node)
         return;
     delete_node_recursively(node->left);
     delete_node_recursively(node->right);
+
     delete node;
 }
 
@@ -113,6 +113,12 @@ typename Dictionary<K, V>::Node* Dictionary<K, V>::rotate_right(Dictionary::Node
     Node* old_left = node->left;
     node->left = old_left->right;
     old_left->right = node;
+
+    old_left->parent = node->parent;
+    node->parent = old_left;
+    if(node->left)
+        node->left->parent = node;
+
     fix_height(node);
     fix_height(old_left);
     return old_left;
@@ -123,6 +129,12 @@ typename Dictionary<K, V>::Node* Dictionary<K, V>::rotate_left(Dictionary::Node*
     Node* old_right = node->right;
     node->right = old_right->left;
     old_right->left = node;
+
+    old_right->parent = node->parent;
+    node->parent = old_right;
+    if(node->right)
+        node->right->parent = node;
+
     fix_height(node);
     fix_height(old_right);
     return old_right;
@@ -161,9 +173,15 @@ typename Dictionary<K, V>::Node* Dictionary<K, V>::insert_node_recursively(Node*
     if(key == node->key)
         node->value = value;
     else if(key < node->key)
+    {
         node->left = insert_node_recursively(node->left, key, value);
+        node->left->parent = node;
+    }
     else
+    {
         node->right = insert_node_recursively(node->left, key, value);
+        node->right->parent = node;
+    }
 
     return balance(node);
 }
@@ -176,6 +194,7 @@ typename Dictionary<K, V>::Node* Dictionary<K, V>::find_min_and_remove(Dictionar
     }
 
     node->left = find_min_and_remove(node->left, node_without_min);
+    node->left->parent = node;
     return balance(node);
 }
 
@@ -185,9 +204,17 @@ typename Dictionary<K, V>::Node* Dictionary<K, V>::find_and_remove(Dictionary::N
         return nullptr;
 
     if(key < node->key)
+    {
         node->left = find_and_remove(node->left, key);
+        if(node->left)
+            node->left->parent = node;
+    }
     else if(key > node->key)
+    {
         node->right = find_and_remove(node->right, key);
+        if(node->right)
+            node->right->parent = node;
+    }
     else
     {
         Node* l = node->left;
@@ -199,7 +226,11 @@ typename Dictionary<K, V>::Node* Dictionary<K, V>::find_and_remove(Dictionary::N
         Node* r_without_min;
         Node* min = find_min_and_remove(r, r_without_min);
         min->right = r_without_min;
+        if(min->right)
+            min->right->parent = min;
         min->left = l;
+        if(min->left)
+            min->left->parent = min;
 
         --length;
         return balance(min);
@@ -215,9 +246,13 @@ typename Dictionary<K, V>::Node* Dictionary<K, V>::find_key(Node *node, const K&
         return nullptr;
 
     if(key < node->key)
-        node->left = find_key(node->left, key);
+    {
+        return find_key(node->left, key);
+    }
     else if(key > node->key)
-        node->right = find_key(node->right, key);
+    {
+        return find_key(node->right, key);
+    }
     else
         return node;
 }
@@ -318,12 +353,7 @@ int Dictionary<K, V>::size() const {
 
 
 template < typename K, typename V>
-Dictionary<K, V>::Iterator::Iterator(Dictionary<K,V>* iterated) : iterated(iterated), current(iterated->root_node)
-{
-    if(current == nullptr) return;
-
-    nodes.push(current);
-}
+Dictionary<K, V>::Iterator::Iterator(Dictionary<K,V>* iterated) : iterated(iterated), current(iterated->root_node){}
 
 template<typename K, typename V>
 typename Dictionary<K, V>::Iterator Dictionary<K, V>::iterator() {
@@ -354,13 +384,7 @@ template<typename K, typename V>
 void Dictionary<K, V>::Iterator::next() {
     if(hasNext())
     {
-        if(current->left != nullptr)
-            nodes.push(current->left);
-        if(current->right != nullptr)
-            nodes.push(current->right);
 
-        current = nodes.top();
-        nodes.pop();
     }
     else
     {
@@ -382,12 +406,12 @@ void Dictionary<K, V>::Iterator::prev() {
 
 template<typename K, typename V>
 bool Dictionary<K, V>::Iterator::hasNext() const {
-    return !nodes.empty();
+    return true;
 }
 
 template<typename K, typename V>
 bool Dictionary<K, V>::Iterator::hasPrev() const {
-    return !prev_nodes.empty();
+    return true;
 }
 
 

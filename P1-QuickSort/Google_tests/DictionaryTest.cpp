@@ -73,7 +73,7 @@ TEST(DictionaryFixture, IteratorSetTest){
     EXPECT_EQ(it.get(), 100);
 }
 
-TEST(DictionaryFixture, IteratorNextHasNExtTest){
+TEST(DictionaryFixture, IteratorNextHasNextTest){
     Dictionary<std::string, int > npc;
     npc.put("health", 10);
     npc.put("armor", 20);
@@ -88,7 +88,6 @@ TEST(DictionaryFixture, IteratorNextHasNExtTest){
     }
 
     std::sort(keys, keys + sizeof(keys)/sizeof(keys[0]));
-
 
     EXPECT_EQ(keys[0], "ammo");
     EXPECT_EQ(keys[1], "armor");
