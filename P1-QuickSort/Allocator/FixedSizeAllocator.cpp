@@ -127,3 +127,20 @@ bool FixedSizeAllocator::CheckIfAllocatorHasAllocatedBlock()
 
     return false;
 }
+
+bool FixedSizeAllocator::CheckIfPointerIsInsideAllocator(void * p) {
+    LPVOID currentIteratedPage = pagePointer;
+
+    while(((PageHeader*)currentIteratedPage)->NextPage != nullptr)
+    {
+        if(CheckIfPointerInPage(p, currentIteratedPage, pageSize))
+            return true;
+
+        currentIteratedPage = ((PageHeader*)currentIteratedPage)->NextPage;
+    }
+
+    if(CheckIfPointerInPage(p, currentIteratedPage, pageSize))
+        return true;
+
+    return false;
+}

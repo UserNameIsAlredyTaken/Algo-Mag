@@ -24,11 +24,9 @@ QuickSorter.h
 
 ../QuickSort_lib/QuickSorter.h
 
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.cpp
-CoalesceAllocator.h
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.h
-iostream
--
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.h
+windows.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/windows.h
 
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.h
 windows.h
@@ -37,6 +35,8 @@ cassert
 -
 MemoryAllocator.h
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
+AllocatorUtil.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.h
 
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.h
 windows.h
@@ -45,10 +45,10 @@ cassert
 -
 MemoryAllocator.h
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
+AllocatorUtil.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.h
 
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
-windows.h
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator/windows.h
 
 C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h
 ../Exception.h

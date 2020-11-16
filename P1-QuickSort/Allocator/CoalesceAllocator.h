@@ -10,6 +10,7 @@
 #include "MemoryAllocator.h"
 #include "AllocatorUtil.h"
 
+#define MIN_ALLOCATABLE_SIZE 16
 
 class CoalesceAllocator { ////TODO: comment all
 public:
@@ -20,12 +21,16 @@ public:
     virtual void* alloc(size_t requiredSize);
     virtual void free(void* p);
 
-//private:
+    bool CheckIfPointerIsInsideAllocator(void * p);
+
+private:
     LPVOID pagePointer;
     size_t pageSize;
 
     void* AllocatePageFromOS() const;
     void* FindFirstFit(void* page, size_t size);
+    bool CheckIfPageHasAllocatedBlock(void* page);
+    bool CheckIfAllocatorHasAllocatedBlock();
 
 #ifdef _DEBUG
     bool bInitialized;
@@ -35,8 +40,11 @@ public:
 
 struct BlockHeader{
     size_t blockSize;
-    LPVOID PrevFreeBloc;
-    LPVOID NextFreeBlock;
+    LPVOID prevFreeBlock;
+    LPVOID nextFreeBlock;
+    LPVOID prevBlock;
+    LPVOID nextBlock;
+    bool bAllocated; ////to check if could be merged without iterating through whole free list
 };
 
 

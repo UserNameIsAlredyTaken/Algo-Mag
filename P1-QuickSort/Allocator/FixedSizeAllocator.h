@@ -19,6 +19,8 @@ public:
     virtual void* alloc();
     virtual void free(void* p);
 
+    bool CheckIfPointerIsInsideAllocator(void* p);
+
 private:
     size_t blockSize;
     size_t pageSize;

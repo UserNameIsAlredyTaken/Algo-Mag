@@ -17,27 +17,44 @@ int main() {
 
     SYSTEM_INFO sSysInfo;
     GetSystemInfo(&sSysInfo); ////get page size
-    FixedSizeAllocator fsa(16, sSysInfo.dwPageSize);
-    fsa.init();
-
-    int* pointersArray[511];
-    for(int i = 0; i < 511; i++){
-        pointersArray[i] = (int*)fsa.alloc();
-    }
-
-    for(int i = 0; i < 511; i++){
-        fsa.free(pointersArray[i]);
-    }
-
-
-
-    fsa.destroy();
+//    FixedSizeAllocator fsa(16, sSysInfo.dwPageSize);
+//    fsa.init();
+//
+//    int* pointersArray[511];
+//    for(int i = 0; i < 511; i++){
+//        pointersArray[i] = (int*)fsa.alloc();
+//    }
+//
+//    for(int i = 0; i < 511; i++){
+//        fsa.free(pointersArray[i]);
+//    }
+//
+//
+//
+//    fsa.destroy();
 
 
     CoalesceAllocator ca(sSysInfo.dwPageSize);
     ca.init();
 
-    int* pi= (int*)ca.FindFirstFit(ca.pagePointer, 5000);
+    int* pi = (int*)ca.alloc(24);
+    for(int i = 0; i < 6; i++)
+        pi[i] = -1;
+
+    int* pi2 = (int*)ca.alloc(24);
+    for(int i = 0; i < 6; i++)
+        pi2[i] = -1;
+
+    int* pi3 = (int*)ca.alloc(24);
+    for(int i = 0; i < 6; i++)
+        pi3[i] = -1;
+
+    ca.free(pi);
+    ca.free(pi2);
+    ca.free(pi3);
+
+    ca.destroy();
+
 
 
     return 0;
