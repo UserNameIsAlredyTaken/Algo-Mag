@@ -1,1 +1,1 @@
-CMakeFiles/QuickSort_run.dir/main.cpp.obj CMakeFiles/QuickSort_run.dir/Dictionary/Dictionary.cpp.obj
+CMakeFiles/QuickSort_run.dir/main.cpp.obj CMakeFiles/QuickSort_run.dir/Dictionary/Dictionary.cpp.obj CMakeFiles/QuickSort_run.dir/Allocator/MemoryAllocator.cpp.obj CMakeFiles/QuickSort_run.dir/Allocator/FixedSizeAllocator.cpp.obj CMakeFiles/QuickSort_run.dir/Allocator/CoalesceAllocator.cpp.obj CMakeFiles/QuickSort_run.dir/Allocator/AllocatorUtil.cpp.obj

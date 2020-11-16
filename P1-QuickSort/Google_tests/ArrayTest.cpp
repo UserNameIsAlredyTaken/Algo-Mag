@@ -29,7 +29,7 @@ TEST(ArrayFixture, InsertGetTest){
     {
         if(b[i] != i)
         {
-            intBeforeThresholdTestPassed = false;
+            floatBeforeThresholdTestPassed = false;
             break;
         }
     }
@@ -62,7 +62,7 @@ TEST(ArrayFixture, InsertWiderTest){
     {
         if(b[i] != i)
         {
-            intAfterThresholdTestPassed = false;
+            floatAfterThresholdTestPassed = false;
             break;
         }
     }

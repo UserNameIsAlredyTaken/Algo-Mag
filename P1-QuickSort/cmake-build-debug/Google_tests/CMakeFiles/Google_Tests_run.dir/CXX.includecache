@@ -12,6 +12,18 @@ utility
 ../Exception.h
 ../Exception.h
 
+../Containers_lib/List.h
+../Exception.h
+../Exception.h
+Array.h
+../Containers_lib/Array.h
+
+../Exception.h
+exception
+-
+string
+-
+
 ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
 ../Google_tests/lib/googletest/include/gtest/gtest/internal/gtest-death-test-internal.h
@@ -332,29 +344,9 @@ cxxabi.h
 acxx_demangle.h
 -
 
-../QuickSort_lib/QuickSorter.h
-
-C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h
-../Exception.h
-C:/Projects/Algo-Mag/P1-QuickSort/Exception.h
-stack
--
-
-C:/Projects/Algo-Mag/P1-QuickSort/Exception.h
-exception
--
-string
--
-
-C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/DictionaryTest.cpp
-QuickSorter.h
--
-algorithm
--
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ListTest.cpp
 gtest/gtest.h
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/gtest/gtest.h
-../Dictionary/Dictionary.h
-C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h
-Array.h
-C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/Array.h
+List.h
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/List.h
 

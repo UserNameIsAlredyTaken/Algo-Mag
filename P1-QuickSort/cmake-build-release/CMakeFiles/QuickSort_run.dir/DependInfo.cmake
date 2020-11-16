@@ -4,6 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.cpp" "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-release/CMakeFiles/QuickSort_run.dir/Allocator/AllocatorUtil.cpp.obj"
+  "C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.cpp" "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-release/CMakeFiles/QuickSort_run.dir/Allocator/CoalesceAllocator.cpp.obj"
+  "C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.cpp" "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-release/CMakeFiles/QuickSort_run.dir/Allocator/FixedSizeAllocator.cpp.obj"
+  "C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.cpp" "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-release/CMakeFiles/QuickSort_run.dir/Allocator/MemoryAllocator.cpp.obj"
   "C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.cpp" "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-release/CMakeFiles/QuickSort_run.dir/Dictionary/Dictionary.cpp.obj"
   "C:/Projects/Algo-Mag/P1-QuickSort/main.cpp" "C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-release/CMakeFiles/QuickSort_run.dir/main.cpp.obj"
   )

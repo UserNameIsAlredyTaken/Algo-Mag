@@ -99,21 +99,105 @@ CMakeFiles\QuickSort_run.dir\Dictionary\Dictionary.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\QuickSort_run.dir\Dictionary\Dictionary.cpp.s /c C:\Projects\Algo-Mag\P1-QuickSort\Dictionary\Dictionary.cpp
 <<
 
+CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.obj: CMakeFiles\QuickSort_run.dir\flags.make
+CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.obj: ..\Allocator\MemoryAllocator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/QuickSort_run.dir/Allocator/MemoryAllocator.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.obj /FdCMakeFiles\QuickSort_run.dir\ /FS -c C:\Projects\Algo-Mag\P1-QuickSort\Allocator\MemoryAllocator.cpp
+<<
+
+CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuickSort_run.dir/Allocator/MemoryAllocator.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\Algo-Mag\P1-QuickSort\Allocator\MemoryAllocator.cpp
+<<
+
+CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuickSort_run.dir/Allocator/MemoryAllocator.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.s /c C:\Projects\Algo-Mag\P1-QuickSort\Allocator\MemoryAllocator.cpp
+<<
+
+CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.obj: CMakeFiles\QuickSort_run.dir\flags.make
+CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.obj: ..\Allocator\FixedSizeAllocator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/QuickSort_run.dir/Allocator/FixedSizeAllocator.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.obj /FdCMakeFiles\QuickSort_run.dir\ /FS -c C:\Projects\Algo-Mag\P1-QuickSort\Allocator\FixedSizeAllocator.cpp
+<<
+
+CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuickSort_run.dir/Allocator/FixedSizeAllocator.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\Algo-Mag\P1-QuickSort\Allocator\FixedSizeAllocator.cpp
+<<
+
+CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuickSort_run.dir/Allocator/FixedSizeAllocator.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.s /c C:\Projects\Algo-Mag\P1-QuickSort\Allocator\FixedSizeAllocator.cpp
+<<
+
+CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.obj: CMakeFiles\QuickSort_run.dir\flags.make
+CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.obj: ..\Allocator\CoalesceAllocator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QuickSort_run.dir/Allocator/CoalesceAllocator.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.obj /FdCMakeFiles\QuickSort_run.dir\ /FS -c C:\Projects\Algo-Mag\P1-QuickSort\Allocator\CoalesceAllocator.cpp
+<<
+
+CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuickSort_run.dir/Allocator/CoalesceAllocator.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\Algo-Mag\P1-QuickSort\Allocator\CoalesceAllocator.cpp
+<<
+
+CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuickSort_run.dir/Allocator/CoalesceAllocator.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.s /c C:\Projects\Algo-Mag\P1-QuickSort\Allocator\CoalesceAllocator.cpp
+<<
+
+CMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.obj: CMakeFiles\QuickSort_run.dir\flags.make
+CMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.obj: ..\Allocator\AllocatorUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/QuickSort_run.dir/Allocator/AllocatorUtil.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.obj /FdCMakeFiles\QuickSort_run.dir\ /FS -c C:\Projects\Algo-Mag\P1-QuickSort\Allocator\AllocatorUtil.cpp
+<<
+
+CMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuickSort_run.dir/Allocator/AllocatorUtil.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\Algo-Mag\P1-QuickSort\Allocator\AllocatorUtil.cpp
+<<
+
+CMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuickSort_run.dir/Allocator/AllocatorUtil.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.s /c C:\Projects\Algo-Mag\P1-QuickSort\Allocator\AllocatorUtil.cpp
+<<
+
 # Object files for target QuickSort_run
 QuickSort_run_OBJECTS = \
 "CMakeFiles\QuickSort_run.dir\main.cpp.obj" \
-"CMakeFiles\QuickSort_run.dir\Dictionary\Dictionary.cpp.obj"
+"CMakeFiles\QuickSort_run.dir\Dictionary\Dictionary.cpp.obj" \
+"CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.obj" \
+"CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.obj" \
+"CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.obj" \
+"CMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.obj"
 
 # External object files for target QuickSort_run
 QuickSort_run_EXTERNAL_OBJECTS =
 
 QuickSort_run.exe: CMakeFiles\QuickSort_run.dir\main.cpp.obj
 QuickSort_run.exe: CMakeFiles\QuickSort_run.dir\Dictionary\Dictionary.cpp.obj
+QuickSort_run.exe: CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.obj
+QuickSort_run.exe: CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.obj
+QuickSort_run.exe: CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.obj
+QuickSort_run.exe: CMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.obj
 QuickSort_run.exe: CMakeFiles\QuickSort_run.dir\build.make
 QuickSort_run.exe: QuickSort_lib\QuickSort_lib.lib
 QuickSort_run.exe: Containers_lib\Containers_lib.lib
 QuickSort_run.exe: CMakeFiles\QuickSort_run.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable QuickSort_run.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable QuickSort_run.exe"
 	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\QuickSort_run.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\QuickSort_run.dir\objects1.rsp @<<
  /out:QuickSort_run.exe /implib:QuickSort_run.lib /pdb:C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\QuickSort_run.pdb /version:0.0  /machine:X86 /INCREMENTAL:NO /subsystem:console  QuickSort_lib\QuickSort_lib.lib Containers_lib\Containers_lib.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

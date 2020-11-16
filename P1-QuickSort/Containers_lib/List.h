@@ -33,7 +33,6 @@ private:
     };
 
     class Iterator{
-//TODO:    private:
     public:
         List<T>* iterated;
         Chunk* current_chunk;

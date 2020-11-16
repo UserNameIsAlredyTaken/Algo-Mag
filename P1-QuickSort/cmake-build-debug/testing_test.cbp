@@ -480,6 +480,30 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.cpp">
+			<Option target="QuickSort_run"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.h">
+			<Option target="QuickSort_run"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.cpp">
+			<Option target="QuickSort_run"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.h">
+			<Option target="QuickSort_run"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.cpp">
+			<Option target="QuickSort_run"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.h">
+			<Option target="QuickSort_run"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.cpp">
+			<Option target="QuickSort_run"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h">
+			<Option target="QuickSort_run"/>
+		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/Array.cpp">
 			<Option target="Containers_lib"/>
 		</Unit>

@@ -24,20 +24,36 @@ QuickSorter.h
 
 ../QuickSort_lib/QuickSorter.h
 
-C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.cpp
-Dictionary.h
-C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.cpp
+CoalesceAllocator.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.h
+iostream
+-
+
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.h
+windows.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/windows.h
+cassert
+-
+MemoryAllocator.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
+
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.h
+windows.h
+-
+cassert
+-
+MemoryAllocator.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
+
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
+windows.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/windows.h
 
 C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h
 ../Exception.h
 C:/Projects/Algo-Mag/P1-QuickSort/Exception.h
 stack
--
-
-C:/Projects/Algo-Mag/P1-QuickSort/Exception.h
-exception
--
-string
 -
 
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/TestUtils.cpp
@@ -67,4 +83,8 @@ Array.h
 C:/Projects/Algo-Mag/P1-QuickSort/Array.h
 Dictionary/Dictionary.h
 C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h
+Allocator/FixedSizeAllocator.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.h
+Allocator/CoalesceAllocator.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.h
 

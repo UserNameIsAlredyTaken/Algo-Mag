@@ -252,6 +252,114 @@ gtest_main\fast:
 	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build
 .PHONY : gtest_main\fast
 
+Allocator\AllocatorUtil.obj: Allocator\AllocatorUtil.cpp.obj
+
+.PHONY : Allocator\AllocatorUtil.obj
+
+# target to build an object file
+Allocator\AllocatorUtil.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.obj
+.PHONY : Allocator\AllocatorUtil.cpp.obj
+
+Allocator\AllocatorUtil.i: Allocator\AllocatorUtil.cpp.i
+
+.PHONY : Allocator\AllocatorUtil.i
+
+# target to preprocess a source file
+Allocator\AllocatorUtil.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.i
+.PHONY : Allocator\AllocatorUtil.cpp.i
+
+Allocator\AllocatorUtil.s: Allocator\AllocatorUtil.cpp.s
+
+.PHONY : Allocator\AllocatorUtil.s
+
+# target to generate assembly for a file
+Allocator\AllocatorUtil.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.s
+.PHONY : Allocator\AllocatorUtil.cpp.s
+
+Allocator\CoalesceAllocator.obj: Allocator\CoalesceAllocator.cpp.obj
+
+.PHONY : Allocator\CoalesceAllocator.obj
+
+# target to build an object file
+Allocator\CoalesceAllocator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.obj
+.PHONY : Allocator\CoalesceAllocator.cpp.obj
+
+Allocator\CoalesceAllocator.i: Allocator\CoalesceAllocator.cpp.i
+
+.PHONY : Allocator\CoalesceAllocator.i
+
+# target to preprocess a source file
+Allocator\CoalesceAllocator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.i
+.PHONY : Allocator\CoalesceAllocator.cpp.i
+
+Allocator\CoalesceAllocator.s: Allocator\CoalesceAllocator.cpp.s
+
+.PHONY : Allocator\CoalesceAllocator.s
+
+# target to generate assembly for a file
+Allocator\CoalesceAllocator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.s
+.PHONY : Allocator\CoalesceAllocator.cpp.s
+
+Allocator\FixedSizeAllocator.obj: Allocator\FixedSizeAllocator.cpp.obj
+
+.PHONY : Allocator\FixedSizeAllocator.obj
+
+# target to build an object file
+Allocator\FixedSizeAllocator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.obj
+.PHONY : Allocator\FixedSizeAllocator.cpp.obj
+
+Allocator\FixedSizeAllocator.i: Allocator\FixedSizeAllocator.cpp.i
+
+.PHONY : Allocator\FixedSizeAllocator.i
+
+# target to preprocess a source file
+Allocator\FixedSizeAllocator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.i
+.PHONY : Allocator\FixedSizeAllocator.cpp.i
+
+Allocator\FixedSizeAllocator.s: Allocator\FixedSizeAllocator.cpp.s
+
+.PHONY : Allocator\FixedSizeAllocator.s
+
+# target to generate assembly for a file
+Allocator\FixedSizeAllocator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.s
+.PHONY : Allocator\FixedSizeAllocator.cpp.s
+
+Allocator\MemoryAllocator.obj: Allocator\MemoryAllocator.cpp.obj
+
+.PHONY : Allocator\MemoryAllocator.obj
+
+# target to build an object file
+Allocator\MemoryAllocator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.obj
+.PHONY : Allocator\MemoryAllocator.cpp.obj
+
+Allocator\MemoryAllocator.i: Allocator\MemoryAllocator.cpp.i
+
+.PHONY : Allocator\MemoryAllocator.i
+
+# target to preprocess a source file
+Allocator\MemoryAllocator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.i
+.PHONY : Allocator\MemoryAllocator.cpp.i
+
+Allocator\MemoryAllocator.s: Allocator\MemoryAllocator.cpp.s
+
+.PHONY : Allocator\MemoryAllocator.s
+
+# target to generate assembly for a file
+Allocator\MemoryAllocator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QuickSort_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.s
+.PHONY : Allocator\MemoryAllocator.cpp.s
+
 Dictionary\Dictionary.obj: Dictionary\Dictionary.cpp.obj
 
 .PHONY : Dictionary\Dictionary.obj
@@ -325,6 +433,18 @@ help:
 	@echo ... gmock_main
 	@echo ... gtest
 	@echo ... gtest_main
+	@echo ... Allocator/AllocatorUtil.obj
+	@echo ... Allocator/AllocatorUtil.i
+	@echo ... Allocator/AllocatorUtil.s
+	@echo ... Allocator/CoalesceAllocator.obj
+	@echo ... Allocator/CoalesceAllocator.i
+	@echo ... Allocator/CoalesceAllocator.s
+	@echo ... Allocator/FixedSizeAllocator.obj
+	@echo ... Allocator/FixedSizeAllocator.i
+	@echo ... Allocator/FixedSizeAllocator.s
+	@echo ... Allocator/MemoryAllocator.obj
+	@echo ... Allocator/MemoryAllocator.i
+	@echo ... Allocator/MemoryAllocator.s
 	@echo ... Dictionary/Dictionary.obj
 	@echo ... Dictionary/Dictionary.i
 	@echo ... Dictionary/Dictionary.s
