@@ -13,8 +13,11 @@ MemoryAllocator::MemoryAllocator() : fsa16(16, 4096),
                                      ca(1000000 * 10 + sizeof(PageHeader) + sizeof(BlockHeader)) ////page size is 10 Mb + space required for headers
                                      {}
 
-MemoryAllocator::~MemoryAllocator() {
-
+MemoryAllocator::~MemoryAllocator()
+{
+#ifdef _DEBUG
+    assert(bDeinitialized);
+#endif
 }
 
 void MemoryAllocator::init() {
@@ -34,34 +37,94 @@ void MemoryAllocator::destroy() {
 #ifdef _DEBUG
     assert(bInitialized);
 #endif
-
+    fsa16.destroy();
+    fsa32.destroy();
+    fsa64.destroy();
+    fsa128.destroy();
+    fsa256.destroy();
+    fsa512.destroy();
+    ca.destroy();
+#ifdef _DEBUG
+    bDeinitialized = true;
+    bInitialized = false;
+#endif
 }
 
 void *MemoryAllocator::alloc(size_t size) {
 #ifdef _DEBUG
     assert(bInitialized);
 #endif
-    if(size <= 16)
-        return fsa16.alloc();
-    if(size <= 32)
-        return fsa32.alloc();
-    if(size <= 64)
-        return fsa64.alloc();
-    if(size <= 128)
-        return fsa128.alloc();
-    if(size <= 256)
-        return fsa256.alloc();
-    if(size <= 512)
-        return fsa512.alloc();
-    if(size <= 100000 * 10)
-        return ca.alloc(size);
+    LPVOID allocatedBLock;
 
-    return VirtualAlloc(NULL, size, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
+    if(size <= 16){
+        allocatedBLock = fsa16.alloc();
+#ifdef _DEBUG
+        allocatedBlocksStat.insert(BlockStat{allocatedBLock, size});
+#endif
+        return allocatedBLock;
+    }
+
+    if(size <= 32){
+        allocatedBLock = fsa32.alloc();
+#ifdef _DEBUG
+        allocatedBlocksStat.insert({allocatedBLock, size});
+#endif
+        return allocatedBLock;
+    }
+
+    if(size <= 64){
+        allocatedBLock = fsa64.alloc();
+#ifdef _DEBUG
+        allocatedBlocksStat.insert({allocatedBLock, size});
+#endif
+        return allocatedBLock;
+    }
+
+    if(size <= 128){
+        allocatedBLock = fsa128.alloc();
+#ifdef _DEBUG
+        allocatedBlocksStat.insert({allocatedBLock, size});
+#endif
+        return allocatedBLock;
+    }
+
+    if(size <= 256){
+        allocatedBLock = fsa256.alloc();
+#ifdef _DEBUG
+        allocatedBlocksStat.insert({allocatedBLock, size});
+#endif
+        return allocatedBLock;
+    }
+
+    if(size <= 512){
+        allocatedBLock = fsa512.alloc();
+#ifdef _DEBUG
+        allocatedBlocksStat.insert({allocatedBLock, size});
+#endif
+        return allocatedBLock;
+    }
+
+    if(size <= 10000000){
+        allocatedBLock = ca.alloc(size);
+#ifdef _DEBUG
+        allocatedBlocksStat.insert({allocatedBLock, size});
+#endif
+        return allocatedBLock;
+    }
+
+    allocatedBLock = VirtualAlloc(NULL, size, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
+#ifdef _DEBUG
+    allocatedBlocksStat.insert({allocatedBLock, size});
+    osAllocatedBlocs.insert({allocatedBLock, size});
+#endif
+
+    return allocatedBLock;
 }
 
 void MemoryAllocator::free(void *p) {
 #ifdef _DEBUG
     assert(bInitialized);
+    allocatedBlocksStat.erase(p);
 #endif
     if(fsa16.CheckIfPointerIsInsideAllocator(p))
     {
@@ -98,19 +161,37 @@ void MemoryAllocator::free(void *p) {
         ca.free(p);
         return;
     }
+#ifdef _DEBUG
+    osAllocatedBlocs.erase(p);
+#endif
     VirtualFree(p, 0, MEM_RELEASE);
 }
-
+#ifdef _DEBUG
 void MemoryAllocator::dumpStat() const {
-#ifdef _DEBUG
     assert(bInitialized);
+    int allocatedCount, freeCount;
+    fsa16.CheckAllocatedAndFreeBlocks(allocatedCount, freeCount);
+    fsa32.CheckAllocatedAndFreeBlocks(allocatedCount, freeCount);
+    fsa64.CheckAllocatedAndFreeBlocks(allocatedCount, freeCount);
+    fsa128.CheckAllocatedAndFreeBlocks(allocatedCount, freeCount);
+    fsa256.CheckAllocatedAndFreeBlocks(allocatedCount, freeCount);
+    fsa512.CheckAllocatedAndFreeBlocks(allocatedCount, freeCount);
+    ca.CheckAllocatedAndFreeBlocks(allocatedCount, freeCount);
+
+    std::cout << "All allocated blocks count: " << allocatedCount << ", All free blocks: " << freeCount << std::endl;
+    std::cout << "OS allocated blocks: " << std::endl;
+    for(auto& [address, size] : osAllocatedBlocs){
+        std::cout << "Block address: " << address << ", size: " << size << std::endl;
+    }
+}
 #endif
 
-}
-
+#ifdef _DEBUG
 void MemoryAllocator::dumpBlocks() const {
-#ifdef _DEBUG
     assert(bInitialized);
-#endif
 
+    for(auto& [address, size] : allocatedBlocksStat){
+        std::cout << "Block address: " << address << ", size: " << size << std::endl;
+    }
 }
+#endif

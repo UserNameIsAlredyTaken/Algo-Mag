@@ -7,6 +7,7 @@
 
 
 #include "windows.h"
+#define OUT
 
 struct PageHeader{
     LPVOID FreeListHead;

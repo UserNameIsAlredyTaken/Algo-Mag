@@ -19,8 +19,12 @@ public:
     virtual void destroy();
     virtual void *alloc(size_t size);
     virtual void free( void *p);
+
+#ifdef _DEBUG
     virtual void dumpStat() const ;
     virtual void dumpBlocks() const ;
+#endif
+
 
 private:
     FixedSizeAllocator fsa16;
@@ -34,8 +38,12 @@ private:
 #ifdef _DEBUG
     bool bInitialized;
     bool bDeinitialized;
+
+    std::map<LPVOID, size_t> allocatedBlocksStat;
+    std::map<LPVOID, size_t> osAllocatedBlocs;
 #endif
 };
+
 
 
 

@@ -20,6 +20,11 @@ public:
     virtual void free(void* p);
 
     bool CheckIfPointerIsInsideAllocator(void* p);
+    bool CheckIfAllocatorHasAllocatedBlock();
+
+#ifdef _DEBUG
+    void CheckAllocatedAndFreeBlocks(OUT int& allocated, OUT int& free);
+#endif
 
 private:
     size_t blockSize;
@@ -28,7 +33,7 @@ private:
 
     void* AllocatePageFromOS();
     bool CheckIfPageHasAllocatedBlock(void* page);
-    bool CheckIfAllocatorHasAllocatedBlock();
+
 
 #ifdef _DEBUG
     bool bInitialized;

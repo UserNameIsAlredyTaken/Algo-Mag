@@ -12,6 +12,7 @@
 
 #define MIN_ALLOCATABLE_SIZE 16
 
+
 class CoalesceAllocator { ////TODO: comment all
 public:
     explicit CoalesceAllocator(size_t pageSize);
@@ -22,6 +23,11 @@ public:
     virtual void free(void* p);
 
     bool CheckIfPointerIsInsideAllocator(void * p);
+    bool CheckIfAllocatorHasAllocatedBlock();
+
+#ifdef _DEBUG
+    void CheckAllocatedAndFreeBlocks(OUT int& allocated, OUT int& free);
+#endif
 
 private:
     LPVOID pagePointer;
@@ -30,7 +36,6 @@ private:
     void* AllocatePageFromOS() const;
     void* FindFirstFit(void* page, size_t size);
     bool CheckIfPageHasAllocatedBlock(void* page);
-    bool CheckIfAllocatorHasAllocatedBlock();
 
 #ifdef _DEBUG
     bool bInitialized;

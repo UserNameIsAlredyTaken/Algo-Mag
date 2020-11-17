@@ -144,3 +144,38 @@ bool FixedSizeAllocator::CheckIfPointerIsInsideAllocator(void * p) {
 
     return false;
 }
+
+#ifdef _DEBUG
+void FixedSizeAllocator::CheckAllocatedAndFreeBlocks(int &allocated, int &free) {
+
+    LPVOID currentIteratedPage = pagePointer;
+    int pagesCount = 0;
+
+    while(((PageHeader*)currentIteratedPage)->NextPage != nullptr){
+        ++pagesCount;
+
+        LPVOID currentIteratedBlock = ((PageHeader*)currentIteratedPage)->FreeListHead;
+        while((LPVOID)(*((PDWORD)currentIteratedBlock) != nullptr){
+            ++free;
+            currentIteratedBlock = (LPVOID)(*((PDWORD)currentIteratedBlock)
+        }
+        ++free;
+
+
+
+        currentIteratedPage = ((PageHeader*)currentIteratedPage)->NextPage;
+    }
+
+    ++pagesCount;
+
+    LPVOID currentIteratedBlock = ((PageHeader*)currentIteratedPage)->FreeListHead;
+    while((LPVOID)(*((PDWORD)currentIteratedBlock) != nullptr){
+        ++free;
+        currentIteratedBlock = (LPVOID)(*((PDWORD)currentIteratedBlock)
+    }
+    ++free;
+
+
+    allocated = pagesCount * ((pageSize - sizeof(PageHeader)) / blockSize);
+}
+#endif

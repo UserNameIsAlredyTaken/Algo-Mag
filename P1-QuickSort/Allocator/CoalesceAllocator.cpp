@@ -252,3 +252,46 @@ bool CoalesceAllocator::CheckIfPointerIsInsideAllocator(void * p) {
 
     return false;
 }
+
+#ifdef _DEBUG
+void CoalesceAllocator::CheckAllocatedAndFreeBlocks(int &allocated, int &free) {
+    LPVOID currentIteratedPage = pagePointer;
+
+    while(((PageHeader*)currentIteratedPage)->NextPage != nullptr){
+        LPVOID currentIteratedBlock = (PBYTE)currentIteratedPage + sizeof(PageHeader);
+
+        while(((BlockHeader*)currentIteratedBlock)->nextBlock != nullptr){
+
+            if(((BlockHeader*)currentIteratedBlock)->bAllocated)
+                ++allocated;
+            else
+                ++free;
+
+            currentIteratedBlock = ((BlockHeader*)currentIteratedBlock)->nextBlock;
+        }
+        if(((BlockHeader*)currentIteratedBlock)->bAllocated)
+            ++allocated;
+        else
+            ++free;
+
+        currentIteratedPage = ((PageHeader*)currentIteratedPage)->NextPage;
+    }
+
+    LPVOID currentIteratedBlock = (PBYTE)currentIteratedPage + sizeof(PageHeader);
+
+    while(((BlockHeader*)currentIteratedBlock)->nextBlock != nullptr){
+
+        if(((BlockHeader*)currentIteratedBlock)->bAllocated)
+            ++allocated;
+        else
+            ++free;
+
+        currentIteratedBlock = ((BlockHeader*)currentIteratedBlock)->nextBlock;
+    }
+    if(((BlockHeader*)currentIteratedBlock)->bAllocated)
+        ++allocated;
+    else
+        ++free;
+
+}
+#endif
