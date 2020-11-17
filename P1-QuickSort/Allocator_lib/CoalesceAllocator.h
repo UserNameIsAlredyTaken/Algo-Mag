@@ -7,13 +7,13 @@
 
 #include "windows.h"
 #include <cassert>
-#include "MemoryAllocator.h"
+//#include "MemoryAllocator.h"
 #include "AllocatorUtil.h"
 
 #define MIN_ALLOCATABLE_SIZE 16
 
 
-class CoalesceAllocator { ////TODO: comment all
+class CoalesceAllocator {
 public:
     explicit CoalesceAllocator(size_t pageSize);
     virtual ~CoalesceAllocator();
@@ -26,7 +26,7 @@ public:
     bool CheckIfAllocatorHasAllocatedBlock();
 
 #ifdef _DEBUG
-    void CheckAllocatedAndFreeBlocks(OUT int& allocated, OUT int& free);
+    void CheckAllocatedAndFreeBlocks(OUT int& allocated, OUT int& free) const;
 #endif
 
 private:
@@ -38,8 +38,8 @@ private:
     bool CheckIfPageHasAllocatedBlock(void* page);
 
 #ifdef _DEBUG
-    bool bInitialized;
-    bool bDeinitialized;
+    bool bInitialized = true;
+    bool bDeinitialized = false;
 #endif
 };
 

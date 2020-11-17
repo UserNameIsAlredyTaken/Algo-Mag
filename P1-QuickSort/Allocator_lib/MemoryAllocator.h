@@ -5,10 +5,11 @@
 #ifndef TESTING_TEST_MEMORYALLOCATOR_H
 #define TESTING_TEST_MEMORYALLOCATOR_H
 
-#define OS_ALLOCATION_THRESHOLD 10485760
 
-#include "FixedSizeAllocator.h"
+#include <map>
 #include "CoalesceAllocator.h"
+#include "FixedSizeAllocator.h"
+#include <iostream>
 
 
 class MemoryAllocator {
@@ -27,17 +28,17 @@ public:
 
 
 private:
+    CoalesceAllocator ca;
     FixedSizeAllocator fsa16;
     FixedSizeAllocator fsa32;
     FixedSizeAllocator fsa64;
     FixedSizeAllocator fsa128;
     FixedSizeAllocator fsa256;
     FixedSizeAllocator fsa512;
-    CoalesceAllocator ca;
 
 #ifdef _DEBUG
-    bool bInitialized;
-    bool bDeinitialized;
+    bool bInitialized = false;
+    bool bDeinitialized = true;
 
     std::map<LPVOID, size_t> allocatedBlocksStat;
     std::map<LPVOID, size_t> osAllocatedBlocs;

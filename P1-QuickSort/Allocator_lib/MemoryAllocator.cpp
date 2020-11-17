@@ -23,6 +23,7 @@ MemoryAllocator::~MemoryAllocator()
 void MemoryAllocator::init() {
 #ifdef _DEBUG
     bInitialized = true;
+    bDeinitialized = false;
 #endif
     fsa16.init();
     fsa32.init();
@@ -59,7 +60,7 @@ void *MemoryAllocator::alloc(size_t size) {
     if(size <= 16){
         allocatedBLock = fsa16.alloc();
 #ifdef _DEBUG
-        allocatedBlocksStat.insert(BlockStat{allocatedBLock, size});
+        allocatedBlocksStat.insert({allocatedBLock, size});
 #endif
         return allocatedBLock;
     }
@@ -169,7 +170,7 @@ void MemoryAllocator::free(void *p) {
 #ifdef _DEBUG
 void MemoryAllocator::dumpStat() const {
     assert(bInitialized);
-    int allocatedCount, freeCount;
+    int allocatedCount = 0, freeCount = 0;
     fsa16.CheckAllocatedAndFreeBlocks(allocatedCount, freeCount);
     fsa32.CheckAllocatedAndFreeBlocks(allocatedCount, freeCount);
     fsa64.CheckAllocatedAndFreeBlocks(allocatedCount, freeCount);
@@ -190,8 +191,14 @@ void MemoryAllocator::dumpStat() const {
 void MemoryAllocator::dumpBlocks() const {
     assert(bInitialized);
 
-    for(auto& [address, size] : allocatedBlocksStat){
-        std::cout << "Block address: " << address << ", size: " << size << std::endl;
+    if(allocatedBlocksStat.size() == 0)
+        std::cout << "No allocated blocks";
+    else
+    {
+        for(auto& [address, size] : allocatedBlocksStat){
+            std::cout << "Block address: " << address << ", size: " << size << std::endl;
+        }
     }
+
 }
 #endif

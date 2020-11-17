@@ -5,7 +5,7 @@
 		<Option title="testing_test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;CMake Files\QuickSort_lib\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;CMake Files\Containers_lib\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\QuickSort_lib\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;CMake Files\Allocator_lib\;CMake Files\Containers_lib\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug"/>
@@ -25,6 +25,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -49,6 +50,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -123,6 +125,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -147,6 +150,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -163,6 +167,56 @@
 					<DistClean command="nmake /NOLOGO /f C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\QuickSort_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="Allocator_lib">
+				<Option output="C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Allocator_lib/Allocator_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Allocator_lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Allocator_lib\Makefile VERBOSE=1 Allocator_lib"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Allocator_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Allocator_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Allocator_lib\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Allocator_lib/fast">
+				<Option output="C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Allocator_lib/Allocator_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Allocator_lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Allocator_lib\Makefile VERBOSE=1 Allocator_lib/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Allocator_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Allocator_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-debug\Allocator_lib\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="Containers_lib">
 				<Option output="C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Containers_lib/Containers_lib.lib" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Containers_lib"/>
@@ -171,6 +225,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -195,6 +250,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -219,6 +275,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest"/>
@@ -245,6 +302,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest"/>
@@ -271,6 +329,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock"/>
@@ -299,6 +358,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock"/>
@@ -327,6 +387,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock"/>
@@ -355,6 +416,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock"/>
@@ -383,6 +445,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest"/>
@@ -409,6 +472,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest"/>
@@ -435,6 +499,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest"/>
@@ -461,6 +526,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest"/>
@@ -480,29 +546,37 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.cpp">
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/AllocatorUtil.cpp">
 			<Option target="QuickSort_run"/>
+			<Option target="Allocator_lib"/>
 		</Unit>
-		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.h">
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/AllocatorUtil.h">
 			<Option target="QuickSort_run"/>
+			<Option target="Allocator_lib"/>
 		</Unit>
-		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.cpp">
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/CoalesceAllocator.cpp">
 			<Option target="QuickSort_run"/>
+			<Option target="Allocator_lib"/>
 		</Unit>
-		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.h">
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/CoalesceAllocator.h">
 			<Option target="QuickSort_run"/>
+			<Option target="Allocator_lib"/>
 		</Unit>
-		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.cpp">
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/FixedSizeAllocator.cpp">
 			<Option target="QuickSort_run"/>
+			<Option target="Allocator_lib"/>
 		</Unit>
-		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.h">
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/FixedSizeAllocator.h">
 			<Option target="QuickSort_run"/>
+			<Option target="Allocator_lib"/>
 		</Unit>
-		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.cpp">
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/MemoryAllocator.cpp">
 			<Option target="QuickSort_run"/>
+			<Option target="Allocator_lib"/>
 		</Unit>
-		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h">
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/MemoryAllocator.h">
 			<Option target="QuickSort_run"/>
+			<Option target="Allocator_lib"/>
 		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/Array.cpp">
 			<Option target="Containers_lib"/>
@@ -524,6 +598,9 @@
 		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Exception.h">
 			<Option target="QuickSort_run"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/AllocatorTest.cpp">
+			<Option target="Google_Tests_run"/>
 		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ArrayTest.cpp">
 			<Option target="Google_Tests_run"/>
@@ -599,6 +676,9 @@
 		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Allocator_lib\"/>
 		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Containers_lib\"/>

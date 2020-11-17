@@ -6,24 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../Containers_lib/Array.h
-utility
--
-../Exception.h
-../Exception.h
-
-../Containers_lib/List.h
-../Exception.h
-../Exception.h
-Array.h
-../Containers_lib/Array.h
-
-../Exception.h
-exception
--
-string
--
-
 ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
 ../Google_tests/lib/googletest/include/gtest/gtest/internal/gtest-death-test-internal.h
@@ -344,9 +326,39 @@ cxxabi.h
 acxx_demangle.h
 -
 
-C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/ListTest.cpp
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/AllocatorUtil.h
+windows.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/windows.h
+
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/CoalesceAllocator.h
+windows.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/windows.h
+cassert
+-
+AllocatorUtil.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/AllocatorUtil.h
+
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/FixedSizeAllocator.h
+windows.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/windows.h
+cassert
+-
+AllocatorUtil.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/AllocatorUtil.h
+
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/MemoryAllocator.h
+map
+-
+CoalesceAllocator.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/CoalesceAllocator.h
+FixedSizeAllocator.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/FixedSizeAllocator.h
+iostream
+-
+
+C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/AllocatorTest.cpp
 gtest/gtest.h
 C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/gtest/gtest.h
-List.h
-C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/List.h
+../Allocator_lib/MemoryAllocator.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/MemoryAllocator.h
 

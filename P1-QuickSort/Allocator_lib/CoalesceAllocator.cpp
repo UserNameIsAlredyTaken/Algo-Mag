@@ -17,6 +17,7 @@ CoalesceAllocator::~CoalesceAllocator()
 void CoalesceAllocator::init() {
 #ifdef _DEBUG
     bInitialized = true;
+    bDeinitialized = false;
 #endif
     pagePointer = AllocatePageFromOS();
 }
@@ -254,7 +255,7 @@ bool CoalesceAllocator::CheckIfPointerIsInsideAllocator(void * p) {
 }
 
 #ifdef _DEBUG
-void CoalesceAllocator::CheckAllocatedAndFreeBlocks(int &allocated, int &free) {
+void CoalesceAllocator::CheckAllocatedAndFreeBlocks(int &allocated, int &free) const {
     LPVOID currentIteratedPage = pagePointer;
 
     while(((PageHeader*)currentIteratedPage)->NextPage != nullptr){

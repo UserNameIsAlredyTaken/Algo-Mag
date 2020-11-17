@@ -33,22 +33,26 @@ windows.h
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/windows.h
 cassert
 -
-MemoryAllocator.h
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
 AllocatorUtil.h
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.h
 
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.h
 windows.h
--
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/windows.h
 cassert
 -
-MemoryAllocator.h
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
 AllocatorUtil.h
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.h
 
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
+map
+-
+CoalesceAllocator.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.h
+FixedSizeAllocator.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.h
+iostream
+-
 
 C:/Projects/Algo-Mag/P1-QuickSort/Dictionary/Dictionary.h
 ../Exception.h
@@ -87,4 +91,6 @@ Allocator/FixedSizeAllocator.h
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.h
 Allocator/CoalesceAllocator.h
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.h
+Allocator/MemoryAllocator.h
+C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
 

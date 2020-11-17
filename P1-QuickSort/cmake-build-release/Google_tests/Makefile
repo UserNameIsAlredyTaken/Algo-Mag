@@ -177,6 +177,39 @@ Google_Tests_run\fast:
 	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
 .PHONY : Google_Tests_run\fast
 
+AllocatorTest.obj: AllocatorTest.cpp.obj
+
+.PHONY : AllocatorTest.obj
+
+# target to build an object file
+AllocatorTest.cpp.obj:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\AllocatorTest.cpp.obj
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
+.PHONY : AllocatorTest.cpp.obj
+
+AllocatorTest.i: AllocatorTest.cpp.i
+
+.PHONY : AllocatorTest.i
+
+# target to preprocess a source file
+AllocatorTest.cpp.i:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\AllocatorTest.cpp.i
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
+.PHONY : AllocatorTest.cpp.i
+
+AllocatorTest.s: AllocatorTest.cpp.s
+
+.PHONY : AllocatorTest.s
+
+# target to generate assembly for a file
+AllocatorTest.cpp.s:
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\AllocatorTest.cpp.s
+	cd C:\Projects\Algo-Mag\P1-QuickSort\cmake-build-release\Google_tests
+.PHONY : AllocatorTest.cpp.s
+
 ArrayTest.obj: ArrayTest.cpp.obj
 
 .PHONY : ArrayTest.obj
@@ -354,6 +387,9 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... Google_Tests_run
+	@echo ... AllocatorTest.obj
+	@echo ... AllocatorTest.i
+	@echo ... AllocatorTest.s
 	@echo ... ArrayTest.obj
 	@echo ... ArrayTest.i
 	@echo ... ArrayTest.s

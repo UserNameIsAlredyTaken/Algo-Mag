@@ -7,13 +7,14 @@ CMakeFiles\QuickSort_run.dir\Allocator\AllocatorUtil.cpp.obj: ..\Allocator\Alloc
 CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.obj: ..\Allocator\AllocatorUtil.h
 CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.obj: ..\Allocator\CoalesceAllocator.cpp
 CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.obj: ..\Allocator\CoalesceAllocator.h
-CMakeFiles\QuickSort_run.dir\Allocator\CoalesceAllocator.cpp.obj: ..\Allocator\MemoryAllocator.h
 
 CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.obj: ..\Allocator\AllocatorUtil.h
 CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.obj: ..\Allocator\FixedSizeAllocator.cpp
 CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.obj: ..\Allocator\FixedSizeAllocator.h
-CMakeFiles\QuickSort_run.dir\Allocator\FixedSizeAllocator.cpp.obj: ..\Allocator\MemoryAllocator.h
 
+CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.obj: ..\Allocator\AllocatorUtil.h
+CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.obj: ..\Allocator\CoalesceAllocator.h
+CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.obj: ..\Allocator\FixedSizeAllocator.h
 CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.obj: ..\Allocator\MemoryAllocator.cpp
 CMakeFiles\QuickSort_run.dir\Allocator\MemoryAllocator.cpp.obj: ..\Allocator\MemoryAllocator.h
 

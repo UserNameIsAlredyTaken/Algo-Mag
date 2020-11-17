@@ -35,6 +35,7 @@ void* FixedSizeAllocator::alloc() {
 void FixedSizeAllocator::init() {
 #ifdef _DEBUG
     bInitialized = true;
+    bDeinitialized = false;
 #endif
     pagePointer = AllocatePageFromOS();
 }
@@ -146,7 +147,9 @@ bool FixedSizeAllocator::CheckIfPointerIsInsideAllocator(void * p) {
 }
 
 #ifdef _DEBUG
-void FixedSizeAllocator::CheckAllocatedAndFreeBlocks(int &allocated, int &free) {
+void FixedSizeAllocator::CheckAllocatedAndFreeBlocks(int &allocated, int &free) const {
+
+    int localAllocated = 0, localFree = 0;
 
     LPVOID currentIteratedPage = pagePointer;
     int pagesCount = 0;
@@ -155,11 +158,11 @@ void FixedSizeAllocator::CheckAllocatedAndFreeBlocks(int &allocated, int &free) 
         ++pagesCount;
 
         LPVOID currentIteratedBlock = ((PageHeader*)currentIteratedPage)->FreeListHead;
-        while((LPVOID)(*((PDWORD)currentIteratedBlock) != nullptr){
-            ++free;
-            currentIteratedBlock = (LPVOID)(*((PDWORD)currentIteratedBlock)
+        while((LPVOID)(*((PDWORD)currentIteratedBlock)) != nullptr){
+            ++localFree;
+            currentIteratedBlock = (LPVOID)(*((PDWORD)currentIteratedBlock));
         }
-        ++free;
+        ++localFree;
 
 
 
@@ -169,13 +172,18 @@ void FixedSizeAllocator::CheckAllocatedAndFreeBlocks(int &allocated, int &free) 
     ++pagesCount;
 
     LPVOID currentIteratedBlock = ((PageHeader*)currentIteratedPage)->FreeListHead;
-    while((LPVOID)(*((PDWORD)currentIteratedBlock) != nullptr){
-        ++free;
-        currentIteratedBlock = (LPVOID)(*((PDWORD)currentIteratedBlock)
+    while((LPVOID)(*((PDWORD)currentIteratedBlock)) != nullptr){
+        ++localFree;
+        currentIteratedBlock = (LPVOID)(*((PDWORD)currentIteratedBlock));
     }
-    ++free;
+    ++localFree;
 
+    int i1 = pageSize - sizeof(PageHeader);
+    int i2 = (pageSize - sizeof(PageHeader)) / blockSize;
+    int i3 = (((pageSize - sizeof(PageHeader)) / blockSize) - localFree);
 
-    allocated = pagesCount * ((pageSize - sizeof(PageHeader)) / blockSize);
+    localAllocated = pagesCount * (((pageSize - sizeof(PageHeader)) / blockSize) - localFree);
+    free += localFree;
+    allocated += localAllocated;
 }
 #endif

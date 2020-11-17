@@ -8,13 +8,14 @@ CMakeFiles/QuickSort_run.dir/Allocator/CoalesceAllocator.cpp.obj
  C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.h
  C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.cpp
  C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.h
- C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
 CMakeFiles/QuickSort_run.dir/Allocator/FixedSizeAllocator.cpp.obj
  C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.h
  C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.cpp
  C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.h
- C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
 CMakeFiles/QuickSort_run.dir/Allocator/MemoryAllocator.cpp.obj
+ C:/Projects/Algo-Mag/P1-QuickSort/Allocator/AllocatorUtil.h
+ C:/Projects/Algo-Mag/P1-QuickSort/Allocator/CoalesceAllocator.h
+ C:/Projects/Algo-Mag/P1-QuickSort/Allocator/FixedSizeAllocator.h
  C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.cpp
  C:/Projects/Algo-Mag/P1-QuickSort/Allocator/MemoryAllocator.h
 CMakeFiles/QuickSort_run.dir/Dictionary/Dictionary.cpp.obj

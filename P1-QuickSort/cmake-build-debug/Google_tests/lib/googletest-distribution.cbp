@@ -5,7 +5,7 @@
 		<Option title="googletest-distribution"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;CMake Files\QuickSort_lib\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;CMake Files\Containers_lib\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\QuickSort_lib\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;CMake Files\Allocator_lib\;CMake Files\Containers_lib\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Google_tests/lib"/>
@@ -25,6 +25,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock"/>
@@ -53,6 +54,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock"/>
@@ -81,6 +83,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock"/>
@@ -109,6 +112,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googlemock"/>
@@ -137,6 +141,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest"/>
@@ -163,6 +168,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest"/>
@@ -189,6 +195,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest"/>
@@ -215,6 +222,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/QuickSort_lib"/>
+					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/include"/>
 					<Add directory="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest"/>
@@ -284,6 +292,9 @@
 		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Google_tests/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Allocator_lib\"/>
 		</Unit>
 		<Unit filename="C:/Projects/Algo-Mag/P1-QuickSort/Containers_lib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Containers_lib\"/>

@@ -5,14 +5,14 @@
 #ifndef TESTING_TEST_FIXEDSIZEALLOCATOR_H
 #define TESTING_TEST_FIXEDSIZEALLOCATOR_H
 
-#include <windows.h>
+#include "windows.h"
 #include <cassert>
-#include "MemoryAllocator.h"
+//#include "MemoryAllocator.h"
 #include "AllocatorUtil.h"
 
 class FixedSizeAllocator {
 public:
-    FixedSizeAllocator(size_t blockSize, size_t pageSize);
+    explicit FixedSizeAllocator(size_t blockSize, size_t pageSize);
     virtual ~FixedSizeAllocator();
     virtual void init();
     virtual void destroy();
@@ -23,7 +23,7 @@ public:
     bool CheckIfAllocatorHasAllocatedBlock();
 
 #ifdef _DEBUG
-    void CheckAllocatedAndFreeBlocks(OUT int& allocated, OUT int& free);
+    void CheckAllocatedAndFreeBlocks(OUT int& allocated, OUT int& free) const;
 #endif
 
 private:
@@ -36,8 +36,8 @@ private:
 
 
 #ifdef _DEBUG
-    bool bInitialized;
-    bool bDeinitialized;
+    bool bInitialized = false;
+    bool bDeinitialized = true;
 #endif
 };
 

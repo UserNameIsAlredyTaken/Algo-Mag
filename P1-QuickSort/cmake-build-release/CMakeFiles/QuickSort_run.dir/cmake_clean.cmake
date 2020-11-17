@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/QuickSort_run.dir/Allocator/AllocatorUtil.cpp.obj"
-  "CMakeFiles/QuickSort_run.dir/Allocator/CoalesceAllocator.cpp.obj"
-  "CMakeFiles/QuickSort_run.dir/Allocator/FixedSizeAllocator.cpp.obj"
-  "CMakeFiles/QuickSort_run.dir/Allocator/MemoryAllocator.cpp.obj"
+  "CMakeFiles/QuickSort_run.dir/Allocator_lib/AllocatorUtil.cpp.obj"
+  "CMakeFiles/QuickSort_run.dir/Allocator_lib/CoalesceAllocator.cpp.obj"
+  "CMakeFiles/QuickSort_run.dir/Allocator_lib/FixedSizeAllocator.cpp.obj"
+  "CMakeFiles/QuickSort_run.dir/Allocator_lib/MemoryAllocator.cpp.obj"
   "CMakeFiles/QuickSort_run.dir/Dictionary/Dictionary.cpp.obj"
   "CMakeFiles/QuickSort_run.dir/main.cpp.obj"
   "QuickSort_run.exe"

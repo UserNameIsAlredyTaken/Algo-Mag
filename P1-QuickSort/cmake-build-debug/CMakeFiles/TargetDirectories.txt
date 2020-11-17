@@ -10,6 +10,12 @@ C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/QuickSort_lib/CMakeFiles/ins
 C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/QuickSort_lib/CMakeFiles/edit_cache.dir
 C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/QuickSort_lib/CMakeFiles/rebuild_cache.dir
 C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/QuickSort_lib/CMakeFiles/list_install_components.dir
+C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Allocator_lib/CMakeFiles/list_install_components.dir
+C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Allocator_lib/CMakeFiles/Allocator_lib.dir
+C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Allocator_lib/CMakeFiles/install/local.dir
+C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Allocator_lib/CMakeFiles/install.dir
+C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Allocator_lib/CMakeFiles/edit_cache.dir
+C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Allocator_lib/CMakeFiles/rebuild_cache.dir
 C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Containers_lib/CMakeFiles/Containers_lib.dir
 C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Containers_lib/CMakeFiles/install/local.dir
 C:/Projects/Algo-Mag/P1-QuickSort/cmake-build-debug/Containers_lib/CMakeFiles/install.dir
