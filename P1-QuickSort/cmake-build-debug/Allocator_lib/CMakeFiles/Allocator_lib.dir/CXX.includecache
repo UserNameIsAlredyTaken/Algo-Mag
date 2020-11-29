@@ -6,27 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/AllocatorUtil.cpp
-AllocatorUtil.h
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/AllocatorUtil.h
-
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/AllocatorUtil.h
 windows.h
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/windows.h
-
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/CoalesceAllocator.cpp
-CoalesceAllocator.h
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/CoalesceAllocator.h
-iostream
--
-
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/CoalesceAllocator.h
-windows.h
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/windows.h
-cassert
--
-AllocatorUtil.h
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/AllocatorUtil.h
 
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/FixedSizeAllocator.cpp
 FixedSizeAllocator.h
@@ -39,18 +21,4 @@ cassert
 -
 AllocatorUtil.h
 C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/AllocatorUtil.h
-
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/MemoryAllocator.cpp
-MemoryAllocator.h
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/MemoryAllocator.h
-
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/MemoryAllocator.h
-map
--
-CoalesceAllocator.h
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/CoalesceAllocator.h
-FixedSizeAllocator.h
-C:/Projects/Algo-Mag/P1-QuickSort/Allocator_lib/FixedSizeAllocator.h
-iostream
--
 

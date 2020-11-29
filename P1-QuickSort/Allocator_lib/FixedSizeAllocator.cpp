@@ -81,8 +81,8 @@ void FixedSizeAllocator::free(void* p)
     while(!CheckIfPointerInPage(p, currentIteratedPage, pageSize))
         currentIteratedPage = ((PageHeader*)currentIteratedPage)->NextPage;
 
-    *((PVOID*)p) = ((PageHeader*)currentIteratedPage)->FreeListHead;
-    ((PageHeader*)currentIteratedPage)->FreeListHead = (PVOID)p;
+    *((PVOID*)p) = ((PageHeader*)currentIteratedPage)->FreeListHead; ////write flh as next free for this pointer
+    ((PageHeader*)currentIteratedPage)->FreeListHead = (PVOID)p; ////write this pointer as new flh
 }
 
 void* FixedSizeAllocator::AllocatePageFromOS() {

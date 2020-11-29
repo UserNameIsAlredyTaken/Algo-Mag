@@ -9,9 +9,9 @@
 #include "Google_tests/TestUtils.cpp"
 #include "Array.h"
 #include "Dictionary/Dictionary.h"
-#include "Allocator/FixedSizeAllocator.h"
-#include "Allocator/CoalesceAllocator.h"
-#include "Allocator/MemoryAllocator.h"
+#include "Allocator_lib/FixedSizeAllocator.h"
+#include "Allocator_lib/CoalesceAllocator.h"
+#include "Allocator_lib/MemoryAllocator.h"
 
 
 int main() {
@@ -37,41 +37,41 @@ int main() {
 //    fsa.destroy();
 
 
-//    CoalesceAllocator ca(sSysInfo.dwPageSize);
-//    ca.init();
-//
-//    int* pi = (int*)ca.alloc(24);
-//    for(int i = 0; i < 6; i++)
-//        pi[i] = -1;
-//
-//    int* pi2 = (int*)ca.alloc(24);
-//    for(int i = 0; i < 6; i++)
-//        pi2[i] = -1;
-//
-//    int* pi3 = (int*)ca.alloc(24);
-//    for(int i = 0; i < 6; i++)
-//        pi3[i] = -1;
-//
-//    ca.free(pi);
-//    ca.free(pi2);
-//    ca.free(pi3);
-//
-//    ca.destroy();
+    CoalesceAllocator ca(1000000 * 10 + sizeof(PageHeader) + sizeof(BlockHeader));
+    ca.init();
+
+    int* pi = (int*)ca.alloc(24);
+    for(int i = 0; i < 6; i++)
+        pi[i] = -1;
+
+    int* pi2 = (int*)ca.alloc(24);
+    for(int i = 0; i < 6; i++)
+        pi2[i] = -1;
+
+    int* pi3 = (int*)ca.alloc(24);
+    for(int i = 0; i < 6; i++)
+        pi3[i] = -1;
+
+    ca.free(pi);
+    ca.free(pi2);
+    ca.free(pi3);
+
+    ca.destroy();
 
 
-    MemoryAllocator allocator;
-    allocator.init();
-    int* pi2 = (int*)allocator.alloc(24);
-    *pi2 = 378;
-//    std::cout << *pi2;
+//    MemoryAllocator allocator;
+//    allocator.init();
+//    int* pi2 = (int*)allocator.alloc(24);
+//    *pi2 = 378;
+////    std::cout << *pi2;
+////
+//    allocator.free(pi2);
 //
-    allocator.free(pi2);
-
-#ifdef _DEBUG
-    allocator.dumpBlocks();
-#endif
-
-    allocator.destroy();
+//#ifdef _DEBUG
+//    allocator.dumpBlocks();
+//#endif
+//
+//    allocator.destroy();
 
     return 0;
 }
